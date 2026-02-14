@@ -49,7 +49,7 @@ const flagItems = [
 const menuItems = [
   { name: "HOME", href: "/" },
   { name: "ABOUT", href: "#link" },
-  { name: "PRICING", href: "#link" },
+  { name: "SERVICE", href: "/service" },
   { name: "CONTACT US", href: "#link" },
 ];
 

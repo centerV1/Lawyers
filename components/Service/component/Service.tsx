@@ -5,35 +5,16 @@ import Link from "next/link";
 import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Lawyer from "@/public/Lawyer.jpg";
-import { Separator } from "../../ui/separator";
 import { serviceData } from "@/data/Service";
 
 export default function Service() {
   return (
     <section className="relative w-full min-h-screen py-20 overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={Lawyer}
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-slate-900/80" />
-      </div>
-
       <div className="relative z-10 container max-w-6xl mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-[#e89a10] drop-shadow-md">
             บริการของเรา
           </h2>
-          <div className="relative flex items-center justify-center mb-10">
-            <Separator className="flex-1 border-dotted" />
-            <div className="px-4">
-              <Scale className="text-[#e89a10] w-10 h-10" />
-            </div>
-            <Separator className="flex-1 border-dotted" />
-          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -52,18 +33,25 @@ export default function Service() {
                 <div className="absolute inset-0 bg-black/20 transition-colors" />
               </div>
 
-              <div className="relative px-4 pb-6 pt-8 text-center bg-white flex flex-col items-center h-40 justify-between">
+              <div className="relative px-4 pb-6 pt-8 text-center bg-white flex flex-col items-center h-50 justify-between">
                 <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-full ">
                   <div className="bg-amber-100 p-2 rounded-full">
                     <Scale className="w-6 h-6 text-amber-600" />
                   </div>
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-800 mt-2 mb-2 line-clamp-2 min-h-14 flex items-center justify-center">
-                  {item.title}
-                </h3>
+                <div className="flex flex-col items-center justify-center text-center gap-2 mt-4 mb-4">
+                  <h4 className="text-lg font-bold text-slate-800 line-clamp-2 leading-tight">
+                    {item.title}
+                  </h4>
 
-                <Link href={`/service/${item.serviceId}`} className="w-full">
+                  <p className="text-sm text-slate-600">{item.title2}</p>
+                </div>
+
+                <Link
+                  href={`/service/${item.serviceId}`}
+                  className="w-full"
+                >
                   <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md py-2 shadow-sm">
                     ดูรายละเอียด
                   </Button>

@@ -14,7 +14,7 @@ export const Logo = ({
 }) => {
   return (
     <div className={cn("flex items-center gap-3", className)}>
-      <LogoIcon className="h-16 w-16 md:h-20 md:w-20" uniColor={uniColor} />
+      <LogoIcon className="h-16 w-16 md:h-18 md:w-18" uniColor={uniColor} />
 
       <div className="flex flex-col justify-center">
         <span

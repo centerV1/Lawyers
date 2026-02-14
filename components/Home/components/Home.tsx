@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import Lawyer from "../../public/Lawyer.jpg";
+import Lawyer from "@/public/Lawyer.jpg";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative h-200 md:h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative h-200 md:h-screen w-full flex flex-col items-center justify-center overflow-hidden ">
       <div className="absolute inset-0 z-0">
         <Image
           src={Lawyer}

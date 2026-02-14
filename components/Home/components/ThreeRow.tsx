@@ -28,7 +28,7 @@ const services = [
 
 export default function ThreeRow() {
   return (
-<div className="container mx-auto px-2 py-8">
+<div className="container max-w-6xl mx-auto px-2 py-8 ">
   
   <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-8">
     

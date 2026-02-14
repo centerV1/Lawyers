@@ -8,19 +8,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-import Pic1 from "../../public/History.jpg";
-import Pic2 from "../../public/History2.jpg";
-import Pic3 from "../../public/History.jpg";
-import Pic4 from "../../public/History.jpg";
-import Pic5 from "../../public/History.jpg";
-import Pic6 from "../../public/History.jpg";
-import Pic7 from "../../public/History.jpg";
-import Certificate from "../../public/Certificate.png";
+import Pic1 from "@/public/History.jpg";
+import Pic2 from "@/public//History2.jpg";
+import Pic3 from "@/public//History.jpg";
+import Pic4 from "@/public//History.jpg";
+import Pic5 from "@/public//History.jpg";
+import Pic6 from "@/public//History.jpg";
+import Pic7 from "@/public//History.jpg";
+import Certificate from "@/public//Certificate.png";
 
 export default function History() {
   return (
     <section className="py-16 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7 flex flex-col">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e1b3c] text-center mb-12">

@@ -47,10 +47,12 @@ const flagItems = [
   },
 ];
 const menuItems = [
-  { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "#link" },
-  { name: "SERVICE", href: "/service" },
-  { name: "CONTACT US", href: "#link" },
+  { name: "หน้าแรก", href: "/" },
+  { name: "เกี่ยวกับเรา", href: "/about" },
+  { name: "บริการของเรา", href: "/service" },
+  { name: "ประสบการณ์ของเรา", href: "/experience" },
+  { name: "บทความ", href: "/article" },
+  { name: "ติดต่อเรา", href: "/contact" },
 ];
 
 const socialItems = [

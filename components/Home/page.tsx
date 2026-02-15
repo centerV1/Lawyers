@@ -5,7 +5,8 @@ import Vision from"./components/Vision";
 import Service from"./components/Service";
 import WhyWe from"./components/WhyWe";
 import Experian from"./components/Experian";
-import Commment from"./components/Commment";
+import OurCustomers from "./components/OurCustomers";
+import HomeExperience from "./components/HomeExperience";
 
 export default function HomePage() {
   return (
@@ -18,8 +19,8 @@ export default function HomePage() {
       <Vision/>
       <Service/>
       <WhyWe/>
-      <Experian/>
-      <Commment/>
+      <HomeExperience/>
+      <OurCustomers/>
     </div>
   );
 }

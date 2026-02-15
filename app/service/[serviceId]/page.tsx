@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { serviceData } from "@/data/Service";
 import SingleService from "@/components/Service/component/SingleService";
-import HomeContent from "@/components/Home/components/Home";
+import Hero from "@/components/Service/component/Hero";
 
 type PageProps = {
   params: Promise<{
@@ -23,7 +23,7 @@ export default async function ServicePage({ params }: PageProps) {
 
   return (
     <div>
-      <HomeContent />
+      <Hero/>
       <SingleService service={service} />
     </div>
   );

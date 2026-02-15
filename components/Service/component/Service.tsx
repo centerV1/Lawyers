@@ -11,12 +11,6 @@ export default function Service() {
   return (
     <section className="relative w-full min-h-screen py-20 overflow-hidden">
       <div className="relative z-10 container max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#e89a10] drop-shadow-md">
-            บริการของเรา
-          </h2>
-        </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {serviceData.map((item, index) => (
             <div

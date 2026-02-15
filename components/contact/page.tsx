@@ -4,10 +4,10 @@ import ContactSection from "./_components/ContactSection";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen flex flex-col bg-white">
+    <div>
       <ContactHero />
       <ContactSection />
       <WhyWe />
-    </main>
+    </div>
   );
 }

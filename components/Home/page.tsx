@@ -4,14 +4,14 @@ import History from"./components/History";
 import Vision from"./components/Vision";
 import Service from"./components/Service";
 import WhyWe from"./components/WhyWe";
-import Experian from"./components/Experian";
+// import Experian from"./components/Experian";
 import OurCustomers from "./components/OurCustomers";
 import HomeExperience from "./components/HomeExperience";
 
-export default function HomePage() {
+export default function HomePage({ dict }: { dict: any }) {
   return (
     <div>
-      <HomeContent/>
+      <HomeContent content={dict.home.hero} />
       <div className="-mt-32 relative z-10">
         <ThreeRow />
       </div>

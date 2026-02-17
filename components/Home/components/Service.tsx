@@ -1,7 +1,7 @@
 "use client";
-
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Lawyer from "@/public/Lawyer.jpg";
@@ -63,7 +63,13 @@ export default function Service() {
                   {item.title}
                 </h3>
 
-                <Link href={`/service/${item.serviceId}`} className="w-full">
+                <Link
+                  href={{
+                    pathname: "/service/[serviceId]",
+                    params: { serviceId: item.serviceId },
+                  }}
+                  className="w-full"
+                >
                   <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md py-2 shadow-sm">
                     ดูรายละเอียด
                   </Button>

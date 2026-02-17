@@ -1,9 +1,12 @@
 "use client";
+
 import Image from "next/image";
 import Lawyer from "@/public/Lawyer.jpg";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
-export default function Hero() {
+export default function HomeContent() {
+  const t = useTranslations("HomePage");
   return (
     <section className="relative h-200 md:h-screen w-full flex flex-col items-center justify-center overflow-hidden ">
       <div className="absolute inset-0 z-0">
@@ -20,7 +23,7 @@ export default function Hero() {
 
       <div className="relative z-10 text-center text-white px-4 max-w-[90%] lg:max-w-5xl">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-2 md:mb-4 animate-fade-in pb-3">
-          เชี่ยวชาญทุกคดีความ
+          {t("title")}
         </h1>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 animate-fade-in text-[#E39B16]">
           บริษัท ทองรักนิติศรี จำกัด

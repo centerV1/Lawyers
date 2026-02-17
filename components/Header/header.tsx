@@ -1,14 +1,17 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
 import { Logo } from "@/components/Logo/logo";
 import { Menu, X } from "lucide-react";
-import React from "react";
+import React, { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
+// import { useLocale } from "next-intl";
+import { useParams } from "next/navigation";
 
 const flagItems = [
   {
     name: "TH",
-    href: "/th",
+    locale: "th",
     viewBox: "0 0 900 600",
     content: (
       <>
@@ -20,7 +23,7 @@ const flagItems = [
   },
   {
     name: "UK",
-    href: "/en",
+    locale: "en",
     viewBox: "0 0 60 30",
     content: (
       <>
@@ -53,7 +56,7 @@ const menuItems = [
   { name: "ประสบการณ์ของเรา", href: "/experience" },
   { name: "บทความ", href: "/article" },
   { name: "ติดต่อเรา", href: "/contact" },
-];
+] as const;
 
 const socialItems = [
   {
@@ -85,6 +88,10 @@ const socialItems = [
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+
+  const pathname = usePathname();
+  const params = useParams();
+  // const currentLocale = useLocale();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -172,7 +179,12 @@ export const HeroHeader = () => {
                   {flagItems.map((item, index) => (
                     <Link
                       key={index}
-                      href={item.href}
+                      href={
+                        { pathname, params } as ComponentProps<
+                          typeof Link
+                        >["href"]
+                      }
+                      locale={item.locale}
                       aria-label={item.name}
                       className="hover:opacity-80 transition-opacity duration-200"
                     >
@@ -188,15 +200,15 @@ export const HeroHeader = () => {
 
                 <div className="flex items-center gap-4">
                   {socialItems.map((item, index) => (
-                    <Link
+                    <a
                       key={index}
                       href={item.href}
                       target="_blank"
                       aria-label={item.name}
+                      rel="noopener noreferrer"
                       className={cn(
                         "text-slate-800",
                         isScrolled && "text-white",
-
                         menuState && "text-slate-800 lg:text-slate-800",
                         isScrolled && "lg:text-white",
                       )}
@@ -212,7 +224,7 @@ export const HeroHeader = () => {
                       >
                         <path d={item.path} />
                       </svg>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>

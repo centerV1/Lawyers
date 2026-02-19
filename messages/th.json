@@ -1,10 +1,10 @@
 {
   "HomePage": {
     "title": "เชี่ยวชาญทุกคดีความ",
-    "welcome": {
-      "title": "Willkommen auf der Startseite"
-    },
-    "contact": "Zur Kontaktseite"
+    "company_name": "บริษัท ทองรักนิติศรี จำกัด",
+    "title2": "มุ่งมั่นการบริการทางกฎหมายที่ได้มาตรฐานสูงสุด เพื่อรักษาผลประโยชน์ของลูกความ",
+    "consultation": "ปรึกษากฎหมาย",
+    "allservice": "บริการเราทั้งหมด"
   },
   "contactForm": {
     "name": "Name",

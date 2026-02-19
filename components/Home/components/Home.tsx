@@ -26,27 +26,26 @@ export default function HomeContent() {
           {t("title")}
         </h1>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 animate-fade-in text-[#E39B16]">
-          บริษัท ทองรักนิติศรี จำกัด
+         {t("company_name")}
         </h1>
       </div>
 
       <div className="relative z-10 pt-2 md:pt-5 text-center px-4 max-w-3xl">
         <p className="text-base sm:text-lg md:text-xl font-bold font-sans text-gray-200 md:text-white leading-relaxed">
-          มุ่งมั่นการบริการทางกฎหมายที่ได้มาตรฐานสูงสุด
-          เพื่อรักษาผลประโยชน์ของลูกความ
+          {t("title2")}
         </p>
       </div>
 
       <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 py-5 w-full px-6 sm:w-auto sm:px-0">
         <Button className="w-full sm:w-auto bg-[#E39B16] hover:bg-[#c58512] text-white text-lg sm:text-xl font-bold h-12 sm:h-14 px-8 sm:px-10 rounded-md">
-          ปรึกษากฎหมาย
+          {t("consultation")}
         </Button>
 
         <Button
           variant="outline"
           className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-black text-lg sm:text-xl font-bold h-12 sm:h-14 px-8 sm:px-10 rounded-md"
         >
-          บริการเราทั้งหมด
+          {t("allservice")}
         </Button>
       </div>
     </section>

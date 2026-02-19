@@ -5,8 +5,8 @@ import { Logo } from "@/components/Logo/logo";
 import { Menu, X } from "lucide-react";
 import React, { ComponentProps } from "react";
 import { cn } from "@/lib/utils";
-// import { useLocale } from "next-intl";
 import { useParams } from "next/navigation";
+import { useTranslate } from "@/utils/useTranslate";
 
 const flagItems = [
   {
@@ -50,12 +50,12 @@ const flagItems = [
   },
 ];
 const menuItems = [
-  { name: "หน้าแรก", href: "/" },
-  { name: "เกี่ยวกับเรา", href: "/about" },
-  { name: "บริการของเรา", href: "/service" },
-  { name: "ประสบการณ์ของเรา", href: "/experience" },
-  { name: "บทความ", href: "/article" },
-  { name: "ติดต่อเรา", href: "/contact" },
+  { name_th: "หน้าแรก",name_en: "Home", href: "/" },
+  { name_th: "เกี่ยวกับเรา",name_en: "About", href: "/about" },
+  { name_th: "บริการของเรา",name_en: "Our Service", href: "/service" },
+  { name_th: "ประสบการณ์ของเรา",name_en: "Experience", href: "/experience" },
+  { name_th: "บทความ",name_en: "Article", href: "/article" },
+  { name_th: "ติดต่อเรา",name_en: "Contact", href: "/contact" },
 ] as const;
 
 const socialItems = [
@@ -88,6 +88,8 @@ const socialItems = [
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+
+  const getLocalized = useTranslate();
 
   const pathname = usePathname();
   const params = useParams();
@@ -145,7 +147,7 @@ export const HeroHeader = () => {
                           isScrolled && "text-[#1A3079]",
                         )}
                       >
-                        {item.name}
+                        {getLocalized(item,'name')}
                       </span>
                     </Link>
                   </li>
@@ -162,7 +164,7 @@ export const HeroHeader = () => {
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
                       >
-                        <span>{item.name}</span>
+                        <span> {getLocalized(item,'name')}</span>
                       </Link>
                     </li>
                   ))}

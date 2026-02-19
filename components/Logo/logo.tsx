@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import ThongrakLogo from "../../public/ThongrakLogo3.png";
@@ -33,7 +34,7 @@ export const Logo = ({
             !uniColor && !isScrolled ? "text-[#e89a10]" : "" 
           )}
         >
-          NITISRI LAW
+          NITISRI LAWFIRM
         </span>
       </div>
     </div>

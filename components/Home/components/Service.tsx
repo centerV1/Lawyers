@@ -1,14 +1,18 @@
 "use client";
-
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import Link from "next/link";
 import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Lawyer from "@/public/Lawyer.jpg";
 import { Separator } from "../../ui/separator";
 import { serviceData } from "@/data/Service";
+import { useTranslate } from "@/utils/useTranslate";
+import { ServiceItem } from "@/data/Service";
 
 export default function Service() {
+
+  const getLocalized = useTranslate<ServiceItem>();
+
   return (
     <section className="relative w-full min-h-screen py-20 overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -45,7 +49,7 @@ export default function Service() {
               <div className="relative h-40 w-full overflow-hidden">
                 <Image
                   src={Lawyer}
-                  alt={item.title}
+                  alt={"pic"}
                   fill
                   className="object-cover transition-transform duration-500"
                 />
@@ -60,10 +64,16 @@ export default function Service() {
                 </div>
 
                 <h3 className="text-lg font-bold text-slate-800 mt-2 mb-2 line-clamp-2 min-h-14 flex items-center justify-center">
-                  {item.title}
+                  {getLocalized(item,'title')}
                 </h3>
 
-                <Link href={`/service/${item.serviceId}`} className="w-full">
+                <Link
+                  href={{
+                    pathname: "/service/[serviceId]",
+                    params: { serviceId: item.serviceId },
+                  }}
+                  className="w-full"
+                >
                   <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md py-2 shadow-sm">
                     ดูรายละเอียด
                   </Button>

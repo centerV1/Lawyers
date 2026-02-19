@@ -1,11 +1,13 @@
 "use client";
+
 import Image from "next/image";
 import Lawyer from "@/public/Lawyer.jpg";
 import { Button } from "@/components/ui/button";
 import SignatureImg from "@/public/signature-line.png";
 import Link from "next/link";
 
-export default function Hero() {
+export default function HomeContent() {
+  const t = useTranslations("HomePage");
   return (
     <section className="relative h-200 md:h-screen w-full flex flex-col items-center justify-center overflow-hidden ">
       <div className="absolute inset-0 z-0">

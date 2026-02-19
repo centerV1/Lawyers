@@ -16,12 +16,12 @@ export default function Hero({ service }: SingleServiceProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#1a3673]/85 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[#4F200D]/85 mix-blend-multiply" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1184px] mx-auto px-6 flex flex-col items-center text-center text-white">
         <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-[#e2991a] mb-6">
-          THONGRAK NITISRI LAW
+          THONGRAK NITISRI LAW FIRM
         </h3>
         <Scale className="h-12 w-12 text-[#e2991a] mb-8" />
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -30,9 +30,7 @@ export default function Hero({ service }: SingleServiceProps) {
         <p className="max-w-2xl text-lg text-slate-200 mb-16">
           เราช่วยให้ลูกค้ายังคงสามารถแข่งขันได้ในภูมิทัศน์ทางกฎหมายที่เปลี่ยนแปลงไป
         </p>
-        <h2 className="text-5xl font-bold mb-8">
-          {service?.title || "บริการของเรา"}
-        </h2>
+        <h2 className="text-5xl font-bold mb-8">บริการ <span className="text-[#e2991a]">ของเรา</span></h2>
         <div className="flex items-center justify-center w-full max-w-md gap-4">
           <div className="h-px bg-[#e2991a]/50 flex-1"></div>
           <Scale className="h-6 w-6 text-[#e2991a]" />

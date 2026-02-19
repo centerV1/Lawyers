@@ -22,7 +22,7 @@ export default function Vision() {
           </p>
         </div>
       </div>
-      <div className="w-full md:w-[55%] bg-[#1e2d6e] text-white px-8 pb-10 pt-16 md:pt-24 md:px-16 flex flex-col items-start">
+      <div className="w-full md:w-[55%] bg-[#1A3079] text-white px-8 pb-10 pt-16 md:pt-24 md:px-16 flex flex-col items-start">
         <div className="max-w-3xl">
           <div className="flex flex-col  items-center md:items-start mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-3 tracking-wide">

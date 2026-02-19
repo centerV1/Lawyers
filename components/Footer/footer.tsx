@@ -1,35 +1,21 @@
+// components/Footer/footer.tsx
 import { Mail, MapPin, Phone, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { Logo } from "../Logo/logo";
-
-const services = [
-  { name: "ทนายความคดีแพ่ง", href: "#" },
-  { name: "คดีฟ้องร้อง / ต่อสู้คดี", href: "#" },
-  { name: "ทนายความคดีอาญา", href: "#" },
-  { name: "บังคับคดี / สืบทรัพย์", href: "#" },
-  { name: "ทนายความคดีล้มละลาย", href: "#" },
-  { name: "กฎหมายแรงงาน", href: "#" },
-  { name: "ทนายความทรัพย์สินทางปัญญา", href: "#" },
-  { name: "จดทะเบียนนิติบุคคล", href: "#" },
-  { name: "ที่ปรึกษากฎหมายธุรกิจ", href: "#" },
-  { name: "พินัยกรรม / จัดการมรดก", href: "#" },
-];
+import { Logowhite } from "../Logo/logowhite";
+import { serviceData } from "@/data/Service"; 
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1e2e6e]/99 text-white pt-16 pb-8 font-sans">
+    <footer className="bg-[#1A3079]/99 text-white pt-16 pb-8 font-sans">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           
-
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="lg:col-span-4 flex flex-col gap-6">
             <Link href="/" className="inline-block w-fit">
-
-              <Logo uniColor={true} />
+              <Logowhite uniColor={true} />
             </Link>
             
             <div className="flex flex-col gap-5 text-sm font-light text-gray-300 mt-2">
-
               <div className="flex items-center gap-3">
                 <div className="bg-[#e89a10] p-1.5 rounded-sm shrink-0">
                    <Mail className="h-4 w-4 text-white" />
@@ -57,14 +43,17 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-4 pl-0 lg:pl-8">
+          <div className="lg:col-span-5 pl-0"> 
             <h3 className="text-xl font-medium mb-6">บริการของเรา</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
-              {services.map((service, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm text-gray-300 hover:text-white transition-colors">
+              {serviceData.map((service) => (
+                <li key={service.serviceId} className="flex items-start gap-2 text-sm text-gray-300 hover:text-white transition-colors">
                   <ChevronRight className="h-4 w-4 text-[#e89a10] mt-0.5 shrink-0" />
-                  <Link href={service.href} className="hover:text-[#e89a10] transition-colors">
-                    {service.name}
+                  <Link 
+                    href={`/service/${service.serviceId}`} 
+                    className="hover:text-[#e89a10] transition-colors"
+                  >
+                    {service.title}
                   </Link>
                 </li>
               ))}

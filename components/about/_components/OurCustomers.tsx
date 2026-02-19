@@ -39,7 +39,7 @@ export default function OurCustomers() {
             <div className="relative z-10 max-w-[1186px] mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-5xl font-bold mb-8">
-                        <span className="text-[#1a3673]">ประสบการณ์</span> <span className="text-[#e2991a]">ของเรา</span>
+                        <span className="text-[#1A3079]">ลูกค้า </span> <span className="text-[#e2991a]">ของเรา</span>
                     </h2>
                     <div className="flex items-center justify-center gap-4">
                         <div className="flex-1 border-t border-dotted border-[#a1a1a1]"></div>

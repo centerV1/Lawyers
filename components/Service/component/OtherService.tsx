@@ -17,7 +17,7 @@ export default function OtherService({ currentId }: OtherExperiencesProps) {
   if (otherItems.length === 0) return null;
 
   return (
-    <section className="bg-[#1a3673] py-24 overflow-hidden">
+    <section className="bg-[#1A3079] py-24 overflow-hidden">
       <div className="max-w-296.5 mx-auto px-4 text-center">
         <div className="mb-12 space-y-4">
           <h4 className="text-[#e2991a] font-bold text-sm tracking-[0.3em] uppercase">
@@ -29,9 +29,9 @@ export default function OtherService({ currentId }: OtherExperiencesProps) {
 
           <div className="relative flex items-center justify-center pt-8">
             <div className="absolute w-full border-t border-dotted border-white/40"></div>
-            <div className="relative z-10 bg-[#1a3673] px-6">
+            <div className="relative z-10 bg-[#1A3079] px-6">
               <div className="bg-[#e89a10] p-2.5 rounded-full shadow-lg border-2 border-white/20">
-                <Scale className="w-5 h-5 text-[#1a3673]" />
+                <Scale className="w-5 h-5 text-[#1A3079]" />
               </div>
             </div>
           </div>
@@ -62,10 +62,7 @@ export default function OtherService({ currentId }: OtherExperiencesProps) {
                 <div className="space-y-3 mb-6">
                   <h4 className="text-lg font-bold text-slate-800 line-clamp-2 leading-tight">
                     {item.title}
-                  </h4>
-                  <p className="text-xs text-slate-500 line-clamp-2">
-                    {item.title2}
-                  </p>
+                  </h4>                 
                 </div>
 
                 <Link href={`/service/${item.serviceId}`} className="w-full">

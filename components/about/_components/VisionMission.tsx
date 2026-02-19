@@ -4,14 +4,14 @@ export default function VisionMission() {
       <div className="bg-[#e2991a] text-white px-6 py-20 flex justify-end">
         <div className="w-full max-w-[485px] text-right">
           <h2 className="text-5xl font-bold mb-2">วิสัยทัศน์</h2>
-          <div className="w-32 h-1 bg-[#1a3673] mb-12 ml-auto"></div>
+          <div className="w-32 h-1 bg-[#1A3079] mb-12 ml-auto"></div>
           <p className="text-base italic">“มุ่งสู่การเป็นสำนักงานกฎหมายระหว่างประเทศระดับแนว
             หน้า ที่ให้บริการครบวงจรด้วยความเป็นมืออาชีพแก่ลูกความ
             ทุกเชื้อชาติเพื่อยกระดับมาตรฐานและภาพลักษณ์วิชาชีพกฎหมายไทยสู่เวทีสากลอย่างยั่งยืน”</p>
         </div>
       </div>
 
-      <div className="bg-[#1a3673] text-white px-6 py-20 flex justify-start">
+      <div className="bg-[#1A3079] text-white px-6 py-20 flex justify-start">
         <div className="w-full max-w-[699px] text-left">
           <h2 className="text-5xl font-bold mb-2">พันธกิจ</h2>
           <div className="w-24 h-1 bg-[#e2991a] mb-12"></div>

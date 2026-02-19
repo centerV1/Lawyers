@@ -2,6 +2,8 @@
 import Image from "next/image";
 import Lawyer from "@/public/Lawyer.jpg";
 import { Button } from "@/components/ui/button";
+import SignatureImg from "@/public/signature-line.png";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -15,35 +17,51 @@ export default function Hero() {
           className="fill"
         />
 
-        <div className="absolute inset-0 bg-black/60 z-0" />
+        <div className="absolute inset-0 bg-[#4F200D]/85 mix-blend-multiply" />
       </div>
 
-      <div className="relative z-10 text-center text-white px-4 max-w-[90%] lg:max-w-5xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-2 md:mb-4 animate-fade-in pb-3">
-          เชี่ยวชาญทุกคดีความ
-        </h1>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 animate-fade-in text-[#E39B16]">
-          บริษัท ทองรักนิติศรี จำกัด
-        </h1>
-      </div>
-
-      <div className="relative z-10 pt-2 md:pt-5 text-center px-4 max-w-3xl">
-        <p className="text-base sm:text-lg md:text-xl font-bold font-sans text-gray-200 md:text-white leading-relaxed">
-          มุ่งมั่นการบริการทางกฎหมายที่ได้มาตรฐานสูงสุด
-          เพื่อรักษาผลประโยชน์ของลูกความ
-        </p>
-      </div>
-
-      <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 py-5 w-full px-6 sm:w-auto sm:px-0">
-        <Button className="w-full sm:w-auto bg-[#E39B16] hover:bg-[#c58512] text-white text-lg sm:text-xl font-bold h-12 sm:h-14 px-8 sm:px-10 rounded-md">
+      <div className="relative z-10 text-center text-white px-4 w-full max-w-5xl">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-6xl font-black mb-2 animate-fade-in tracking-tight">
           ปรึกษากฎหมาย
-        </Button>
+        </h1>
 
+        <div className="relative inline-block pb-15">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-[#E39B16] leading-tight px-2">
+            บริษัท ทองรักนิติศรี จำกัด
+          </h2>
+
+          <div className="absolute left-0 right-0 bottom-0 w-full flex justify-center translate-y-2">
+            <Image
+              src={SignatureImg}
+              alt="Signature Line"
+              width={800}
+              height={150}
+              className="w-full h-auto object-contain pointer-events-none opacity-95"
+              priority
+            />
+          </div>
+        </div>
+
+        <div className="mt-8">
+          <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-100 max-w-5xl mx-auto leading-relaxed">
+            มุ่งมั่นการบริการทางกฎหมายที่ได้มาตรฐานสูงสุด เพื่อรักษาผลประโยชน์ของลูกความ
+          </p>
+        </div>
+      </div>
+
+      <div className="relative z-10 flex flex-col sm:flex-row gap-5 mt-16 w-full px-8 sm:w-auto sm:justify-center">
+        <Button className="w-full sm:w-[186px] h-[59px] bg-[#E39B16] hover:bg-[#c58512] text-white text-lg font-bold rounded-xl shadow-2xl transition-transform hover:scale-105 active:scale-95">
+          <Link href="/contact">
+            ปรึกษากฎหมาย
+          </Link>
+        </Button>
         <Button
           variant="outline"
-          className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-black text-lg sm:text-xl font-bold h-12 sm:h-14 px-8 sm:px-10 rounded-md"
+          className="w-full sm:w-[285px] h-[59px] bg-transparent border-2 border-white text-white hover:bg-white hover:text-black text-lg font-bold rounded-xl transition-all active:scale-95 backdrop-blur-sm"
         >
-          บริการเราทั้งหมด
+          <Link href="/service">
+            บริการเราทั้งหมด
+          </Link>
         </Button>
       </div>
     </section>

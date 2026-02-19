@@ -1,9 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import ThongrakLogo from "../../public/ThongrakLogo3.png";
+import ThongrakLogo from "../../public/ThongrakLogo4.png";
 
-export const Logo = ({
+export const Logowhite = ({
   className,
   uniColor,
   isScrolled,

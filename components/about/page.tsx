@@ -1,4 +1,5 @@
 "use client";
+import Vision from "../Home/components/Vision";
 import Hero from "./_components/Hero";
 import History from "./_components/History";
 import OurCustomers from "./_components/OurCustomers";
@@ -10,9 +11,9 @@ export default function AboutPageContent() {
     <main className="min-h-screen bg-white">
       <Hero />
       <History />
-      <VisionMission />
-      <OurCustomers />
+      <Vision/>
       <OurTeam/>
+      <OurCustomers />
     </main>
   );
 }

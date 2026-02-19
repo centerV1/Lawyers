@@ -38,8 +38,6 @@ export default function Service() {
                   <h4 className="text-lg font-bold text-slate-800 line-clamp-2 leading-tight">
                     {item.title}
                   </h4>
-
-                  <p className="text-sm text-slate-600">{item.title2}</p>
                 </div>
 
                 <Link

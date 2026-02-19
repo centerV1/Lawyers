@@ -100,7 +100,7 @@ export const HeroHeader = () => {
         className={cn(
           "fixed z-20 backdrop-blur-lg bg-white border-b-5 border-amber-400 shadow-sm brightness-100 w-full py-1 transition-all duration-300 ",
           isScrolled &&
-            "py-0 bg-white/20 backdrop-blur-lg border-transparent shadow-none brightness-125",
+            "py-0 bg-white/90 backdrop-blur-lg border-transparent shadow-none brightness-125",
         )}
       >
         <div className="mx-auto mt-2 max-w-7xl px-6 transition-all duration-300 ">
@@ -198,7 +198,7 @@ export const HeroHeader = () => {
                         isScrolled && "text-white",
 
                         menuState && "text-slate-800 lg:text-slate-800",
-                        isScrolled && "lg:text-white",
+                        isScrolled && "lg:text-[#FF9A00]",
                       )}
                     >
                       <svg

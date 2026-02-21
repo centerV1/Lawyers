@@ -5,15 +5,16 @@ export const routing = defineRouting({
   locales: ["en", "th"],
   defaultLocale: "en",
 
-  // 1. Add all your application routes here
   pathnames: {
     "/": "/",
     "/about": "/about",
+    "/about/[aboutId]": "/about/[aboutId]",
     "/service": "/service",
     "/service/[serviceId]": "/service/[serviceId]",
     "/experience": "/experience",
     "/experience/[experienceId]": "/experience/[experienceId]",
     "/article": "/article",
+    "/article/[articleId]": "/article/[articleId]",
     "/contact": "/contact",
     "/th": "/th",
     "/en": "/en",

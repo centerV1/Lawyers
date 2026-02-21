@@ -5,9 +5,13 @@ import { Link } from "@/i18n/routing";
 import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Lawyer from "@/public/Lawyer.jpg";
-import { serviceData } from "@/data/Service";
+import { serviceData, ServiceItem } from "@/data/Service";
+import { useTranslate } from "@/utils/useTranslate";
+import { useTranslations } from "next-intl";
 
 export default function Service() {
+  const getLocalized = useTranslate<ServiceItem>();
+  const t = useTranslations("Service");
   return (
     <section className="relative w-full min-h-screen py-20 overflow-hidden">
       <div className="relative z-10 container max-w-6xl mx-auto px-4">
@@ -20,7 +24,7 @@ export default function Service() {
               <div className="relative h-40 w-full overflow-hidden">
                 <Image
                   src={Lawyer}
-                  alt={item.title}
+                  alt={getLocalized(item, "title") || ""}
                   fill
                   className="object-cover transition-transform duration-500"
                 />
@@ -36,7 +40,7 @@ export default function Service() {
 
                 <div className="flex flex-col items-center justify-center text-center gap-2 mt-4 mb-4">
                   <h4 className="text-lg font-bold text-slate-800 line-clamp-2 leading-tight">
-                    {item.title}
+                    {getLocalized(item, "title")}
                   </h4>
                 </div>
 
@@ -48,7 +52,7 @@ export default function Service() {
                   className="w-full"
                 >
                   <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md py-2 shadow-sm">
-                    ดูรายละเอียด
+                    {t("details")}
                   </Button>
                 </Link>
               </div>

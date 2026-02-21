@@ -1,33 +1,70 @@
 {
-  "Menu":{
-    
-  },
-
   "HomePage": {
     "title": "Expert in all types of legal cases",
-    "company_name": "THONGRAKNITISRI CO., LTD.",
+    "company_name": "THONGRAKNITISRI CO LTD.",
     "title2": "We are committed to providing the highest standards of legal services to protect the interests of our clients.",
     "consultation": "Legal consultation",
     "allservice": "All our services"
-
   },
-  "contactForm": {
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "submit": "Submit"
+  "History": {
+    "title": "Our History",
+    "companyName": "Thongrak Nitisri Co., Ltd. ",
+    "foundedText": "was established in 2019, initially opening as",
+    "formerName": "Pongsit Law Office",
+    "description": "formed by a team of 3 expert lawyers and 1 professional legal execution staff. With a vision of providing comprehensive and highly professional legal expertise, we are dedicated to delivering end-to-end services. This ranges from in-depth legal consultation, analysis, planning, and dispute resolution to reviewing and drafting all types of business agreements, license applications, issuing debt collection notices, various certificates, and foreign document notarization. We also serve as legal counsel in civil, criminal, anti-corruption, administrative, and labor cases, as well as estate administrator appointments, asset tracing, and legal execution to ensure our clients receive the maximum benefit.",
+    "readMore": "Read More",
+    "certificateTitle": "Lawyer Man Law Office Certificate",
+    "certificateSubtitle": "(Lawyers Council under the Royal Patronage)",
+    "consultButton": "Legal Consultation"
   },
-  "validation": {
-    "invalid": "Email invalid",
-    "required": "Name required",
-    "min": "Message required to be at least 10 characters"
+  "Vision": {
+    "title": "Vision",
+    "description": "“Striving to be a leading law firm providing comprehensive, professional services to clients of all nationalities, to sustainably elevate the standards and image of the Thai legal profession to an international level.”",
+    "mission": "Mission",
+    "title1": "Comprehensive Services",
+    "description1": "Committed to delivering legal services covering all dimensions, from preventive strategies to complete dispute resolution and problem-solving. This includes consultation, contract drafting and review, litigation, as well as full-scale asset tracing and execution.",
+    "title2": "Excellence as Litigation Leaders",
+    "description2": "Elevating the organization to become an international legal leader, with particular expertise in litigation and case management that emphasizes sharpness, accuracy, and full professional ethics.",
+    "title3": "Trusted Partner",
+    "description3": "Standing firm as a strong and reliable legal partner to protect the interests and build sustainable success for clients of all nationalities with utmost sincerity."
   },
-
-    "Service": {
-    "title": "Hello world!",
-    "welcome": {
-      "title": "Welcome to the home page"
-    },
-    "contact": "Go to the contact page"
+  "Service": {
+    "company_name": "THONGRAKNITISRI CO LTD.",
+    "title": "The best legal services",
+    "description": "We help our clients remain competitive in the evolving legal landscape",
+    "our": "Our",
+    "service": "Services",
+    "details": "more details",
+    "other": "Other",
+    "service2": "Services",
+    "ourservice": "Our Service",
+    "view": "View More"
+  },
+  "Experience": {
+    "our": "Experience",
+    "experience": "Our",
+    "details": "more details",
+    "view": "View More"
+  },
+  "WhyWe": {
+    "why": "Why choose us ?"
+  },
+  "AboutUs": {
+    "about": "About",
+    "us": "Us"
+  },
+  "Footer": {
+    "address1": "102/8 Moo 5, Nong Chabok Subdistrict, Mueang Nakhon Ratchasima District, Nakhon Ratchasima 30000",
+    "address2": "199/70 Moo 4, Bang Duea Subdistrict, Mueang District, Pathum Thani 12000",
+    "contract": "Contact legal services",
+    "ourservice": "Our Service",
+    "trust": "Trust us, we'll stand by your side",
+    "reslove": "Resolve legal issues professionally",
+    "contractus": "Contact Us",
+    "protect": "Protect the interests of all our clients"
+  },
+  "Customer": {
+    "our": "Our",
+    "customer": "Customer"
   }
 }

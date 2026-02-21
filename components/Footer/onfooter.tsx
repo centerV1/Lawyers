@@ -4,8 +4,12 @@ import Lawyer from "../../public/Lawyer.jpg";
 import { Button } from "@/components/ui/button"; 
 import { Separator } from "@/components/ui/separator";
 import { Scale, Phone, Mail } from "lucide-react"; 
+import { useTranslations } from "next-intl";
 
 export default function OnFooter() {
+
+  const t = useTranslations("Footer")
+
   return (
     <section className="relative w-full h-150 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -21,15 +25,15 @@ export default function OnFooter() {
 
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center text-center text-white space-y-6">
         <h3 className="text-[#e89a10] font-bold tracking-widest text-sm md:text-base uppercase mb-2">
-          Thongrak Nitisri Law
+          Thongrak Nitisri Lawfirm
         </h3>
 
         <div className="space-y-2">
           <h1 className="text-2xl md:text-4xl font-bold leading-tight">
-            ไว้ใจเรา พร้อมยืนหยัดเคียงข้างคุณ
+            {t("trust")}
           </h1>
           <h2 className="text-xl md:text-3xl font-medium">
-            แก้ไขปัญหาทางกฎหมายอย่างมืออาชีพ
+            {t("reslove")}
           </h2>
         </div>
 
@@ -42,11 +46,11 @@ export default function OnFooter() {
         </div>
 
         <p className="text-lg md:text-xl text-gray-200 mb-4">
-          ปกป้องผลประโยชน์ของลูกความทุกท่าน
+          {t("protect")}
         </p>
 
         <Button className="w-full max-w-md bg-[#e89a10] hover:bg-amber-600 text-white h-12 text-lg rounded-md font-medium transition-colors duration-200">
-          ติดต่อเรา
+          {t("contractus")}
         </Button>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-8 text-sm md:text-base">

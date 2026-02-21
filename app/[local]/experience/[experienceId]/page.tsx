@@ -1,4 +1,3 @@
-// app/experience/[id]/page.tsx
 import { notFound } from "next/navigation";
 import { experienceData } from "@/data/Experience";
 import ExperienceHero from "@/components/experience/component/Hero";
@@ -6,13 +5,17 @@ import SingleExperience from "@/components/experience/component/SingleExperience
 import OtherExperiences from "@/components/experience/component/OtherExperiences";
 
 type PageProps = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ 
+    experienceId: string 
+  }>;
 };
 
 export default async function ExperienceDetailPage({ params }: PageProps) {
-  const { id } = await params;
-  const currentId = Number(id);
-  const experience = experienceData.find((item) => item.id === currentId);
+  const { experienceId } = await params;
+  const currentId = Number(experienceId);
+  const experience = experienceData.find(
+    (item) => item.experienceId === currentId,
+  );
 
   if (!experience) notFound();
 
@@ -20,7 +23,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
     <main className="min-h-screen bg-white">
       <ExperienceHero />
       <SingleExperience experience={experience} />
-      <div className="mt-20"> 
+      <div className="mt-20">
         <OtherExperiences currentId={currentId} />
       </div>
     </main>

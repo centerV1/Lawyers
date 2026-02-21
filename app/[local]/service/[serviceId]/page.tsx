@@ -1,4 +1,3 @@
-// app/service/[serviceId]/page.tsx
 import { notFound } from "next/navigation";
 import { serviceData } from "@/data/Service";
 import SingleService from "@/components/Service/component/SingleService";

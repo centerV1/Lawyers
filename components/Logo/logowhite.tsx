@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import ThongrakLogo from "../../public/ThongrakLogo4.png";
+import ThongrakLogo from "../../public/ThongrakLogo3.png";
 
 export const Logowhite = ({
   className,

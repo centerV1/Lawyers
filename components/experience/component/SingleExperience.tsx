@@ -1,40 +1,46 @@
-// components/experience/component/SingleExperience.tsx
+"use client";
+
 import Image from "next/image";
 import { ExperienceItem } from "@/data/Experience";
-import { Facebook, Twitter, Linkedin } from "lucide-react"; // ใช้ lucide-react สำหรับไอคอน
+import { Facebook, Twitter, Linkedin } from "lucide-react";
+import { useTranslate } from "@/utils/useTranslate";
 
 interface SingleExperienceProps {
   experience: ExperienceItem;
 }
 
-export default function SingleExperience({ experience }: SingleExperienceProps) {
+export default function SingleExperience({
+  experience,
+}: SingleExperienceProps) {
+  const getLocalized = useTranslate<ExperienceItem>();
+
   return (
     <section className="mt-12">
-      <div className="max-w-[1186px] mx-auto px-4">
+      <div className="max-w-296.5 mx-auto px-4">
         <div className="bg-[#f8f9fa] rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-          
-          <div className="relative w-full h-[500px]">
-            <Image
-              src={experience.detailImage}
-              alt={experience.title}
-              fill
-              className="object-cover"
-            />
-          </div>
-
+          {experience.image && (
+            <div className="relative w-full h-125">
+              <Image
+                src={experience.detailImage}
+                alt={getLocalized(experience, "title") || ""}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
           <div className="p-8 md:p-12 space-y-8">
             <header>
               <h2 className="text-3xl font-bold text-slate-900 mb-2">
-                {experience.title}
+                {getLocalized(experience, "title")}
               </h2>
               <p className="text-xl text-[#e2991a] font-medium italic">
-                {experience.subtitle}
+                {getLocalized(experience, "subtitle")}
               </p>
             </header>
 
             <article className="prose prose-lg max-w-none text-slate-700 leading-relaxed">
               <p className="whitespace-pre-line">
-                {experience.description}
+                {getLocalized(experience, "description")}
               </p>
             </article>
 

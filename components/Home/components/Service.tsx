@@ -8,10 +8,12 @@ import { Separator } from "../../ui/separator";
 import { serviceData } from "@/data/Service";
 import { useTranslate } from "@/utils/useTranslate";
 import { ServiceItem } from "@/data/Service";
+import { useTranslations } from "use-intl";
 
 export default function Service() {
-
   const getLocalized = useTranslate<ServiceItem>();
+
+  const t = useTranslations("Service");
 
   return (
     <section className="relative w-full min-h-screen py-20 overflow-hidden">
@@ -29,7 +31,7 @@ export default function Service() {
       <div className="relative z-10 container max-w-6xl mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-[#e89a10] drop-shadow-md">
-            บริการของเรา
+            {t("ourservice")}
           </h2>
           <div className="relative flex items-center justify-center mb-10">
             <Separator className="flex-1 border-dotted" />
@@ -64,7 +66,7 @@ export default function Service() {
                 </div>
 
                 <h3 className="text-lg font-bold text-slate-800 mt-2 mb-2 line-clamp-2 min-h-14 flex items-center justify-center">
-                  {getLocalized(item,'title')}
+                  {getLocalized(item, "title")}
                 </h3>
 
                 <Link
@@ -74,8 +76,8 @@ export default function Service() {
                   }}
                   className="w-full"
                 >
-                  <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-md py-2 shadow-sm">
-                    ดูรายละเอียด
+                  <Button className="w-full bg-[#e89a10] hover:bg-[#cf890d] text-white font-bold rounded-md shadow-md transition-colors text-sm uppercase tracking-wider">
+                    {t("details")}
                   </Button>
                 </Link>
               </div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import PaymentSteps from "./PaymentSteps";
 import StepAddFriend from "./StepAddFriend";
 import StepTransfer from "./StepTransfer";
@@ -17,6 +18,7 @@ interface PaymentModalProps {
 
 export default function PaymentModal({ isOpen, onClose, serviceTitle, price }: PaymentModalProps) {
   const [step, setStep] = useState(1);
+  const t = useTranslations("Payment.StepTitles");
 
   const handleClose = () => {
     setStep(1);
@@ -26,9 +28,9 @@ export default function PaymentModal({ isOpen, onClose, serviceTitle, price }: P
   if (!isOpen) return null;
 
   const stepTitles = [
-    "ขั้นตอนที่ 1 เพื่อเพิ่มเพื่อนและส่งหลักฐานการโอนเงินพร้อมรายละเอียดคดีเพื่อพบกับที่ปรึกษาของคุณ",
-    "ขั้นตอนที่ 2 ชำระเงินตามจำนวนที่ระบุไว้",
-    "ขั้นตอนที่ 3 กรุณาบันทึกภาพหน้าจอสลิปไว้เป็นหลักฐานเพื่อใช้ยืนยันตัวตนและเปิดแฟ้มคดีในขั้นตอนถัดไป"
+    t("step1"),
+    t("step2"),
+    t("step3")
   ];
 
   return (

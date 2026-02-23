@@ -41,10 +41,23 @@
     "view": "View More"
   },
   "Experience": {
+    "company_name": "THONGRAKNITISRI CO LTD.",
     "our": "Experience",
+    "our2": "Experience",
     "experience": "Our",
     "details": "more details",
-    "view": "View More"
+    "view": "View More",
+    "service": "The best legal services",
+    "help": "We help our clients remain competitive in the evolving legal landscape",
+    "other": "Experience"
+  },
+  "Article": {
+    "company_name": "THONGRAKNITISRI CO LTD.",
+    "service": "The best legal services",
+    "help": "We help our clients remain competitive in the evolving legal landscape",
+    "article": "Our",
+    "our": "Article",
+    "details": "more details"
   },
   "WhyWe": {
     "why": "Why choose us ?"
@@ -56,6 +69,7 @@
     "service": "The best legal services",
     "help": "We help our clients remain competitive in the evolving legal landscape",
     "contract": "Contract Us",
+    "contract2": "Contact Legal Consultation",
     "history": "Founding",
     "founding": "History",
     "p1": "was founded in 2019 by a group of 7 expert lawyers and 2 professional legal execution staff. With a vision committed to being a comprehensive and highly professional legal representative, we intend to deliver services covering everything from in-depth legal consultation, analysis, and preventive planning for potential future disputes, to reviewing and drafting all types of business agreements, processing complex licenses, and debt collection. Furthermore, we represent clients in civil, criminal, and labor cases, as well as in arbitration processes, including specialized expertise in asset tracing and legal execution to ensure the maximum benefit for our clients.",
@@ -63,7 +77,8 @@
     "p3": "We also adhere to the principle of equality and are committed to providing legal services to all clients with the highest professional ethics. We are ready to serve without discrimination based on race or background, because our primary goal is to be a widely accepted legal representative whose legal success is continuously recommended by word of mouth. This drives our company forward to become a leading international law firm standing firm on righteousness and justice.",
     "our": "Our",
     "team": "team",
-    "view": "more details"
+    "view": "more details",
+    "details": "more details"
   },
   "Footer": {
     "address1": "102/8 Moo 5, Nong Chabok Subdistrict, Mueang Nakhon Ratchasima District, Nakhon Ratchasima 30000",
@@ -75,8 +90,67 @@
     "contractus": "Contact Us",
     "protect": "Protect the interests of all our clients"
   },
+  "Contact": {
+    "company_name": "THONGRAKNITISRI CO LTD.",
+    "service": "The best legal services",
+    "help": "We help our clients remain competitive in the evolving legal landscape",
+    "contact": "Contact",
+    "us": "Us",
+    "form_title": "Contact Us Form",
+    "form_fname": "First Name",
+    "form_lname": "Last Name",
+    "form_email": "Email",
+    "form_phone": "Phone Number",
+    "form_details": "Details",
+    "form_submit": "Submit",
+    "address": "4, 4/5 Central Tower, 12th Fl., Ratchadamri Rd., Pathum Wan, Pathum Wan, Bangkok, Thailand 10330",
+    "location": "Location",
+    "contact_legal": "Legal Service Contact",
+    "email_label": "Email"
+  },
   "Customer": {
     "our": "Our",
     "customer": "Customer"
+  },
+  "Payment": {
+    "rates": "Price rates",
+    "currency": "THB",
+    "pay": "Payment ",
+    "prompay": "* 100% Secure PromptPay Payment",
+    "Steps": {
+      "add_friend": "Add Friend",
+      "payment": "Payment",
+      "submit_proof": "Submit Proof/Case"
+    },
+    "StepTitles": {
+      "step1": "Step 1: Add us on LINE and send your proof of transfer with case details to meet your consultant.",
+      "step2": "Step 2: Pay the specified amount.",
+      "step3": "Step 3: Please save a screenshot of the slip as proof to verify your identity and open a case file."
+    },
+    "AddFriend": {
+      "line_id": "LINE ID: @THONGRAKLAW"
+    },
+    "Transfer": {
+      "bank_name": "Kasikornbank",
+      "account_name": "Mr. Pongsit Thongrak",
+      "amount_to_pay": "Amount to pay",
+      "currency": "THB",
+      "warning": "Please verify the amount is correct before confirming the transfer and clicking next."
+    },
+    "Final": {
+      "proof_of_transfer": "Proof of transfer",
+      "slip": "Slip",
+      "consultant_name": "Consultant Name:",
+      "client_fullname": "Full Name [Specify client name]",
+      "client_nickname": "Nickname [Specify nickname]",
+      "client_phone": "Phone Number [Specify phone number]",
+      "footer_note": "Our staff will contact you back within 24 hours. Thank you for trusting us."
+    },
+    "Footer": {
+      "cancel": "Cancel",
+      "back": "Back",
+      "finish": "Finish",
+      "next": "Next"
+    }
   }
 }

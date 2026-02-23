@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Facebook, Linkedin } from "lucide-react";
+import { Facebook, Linkedin , ImageOff } from "lucide-react";
 import { ServiceItem } from "@/data/Service";
 import PaymentModal from "./payment/PaymentModal";
 import { useTranslate } from "@/utils/useTranslate";
-
+import { useTranslations } from "next-intl";
 interface SingleServiceProps {
   service: ServiceItem;
 }
@@ -14,12 +14,13 @@ interface SingleServiceProps {
 export default function SingleService({ service }: SingleServiceProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const getLocalized = useTranslate<ServiceItem>();
+  const t = useTranslations("Payment");
   return (
     <div className="bg-[#eff3f6] py-12 font-sans">
       <div className="container max-w-296.5 mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           <div className="lg:col-span-2 space-y-8 bg-white p-8 md:p-5 rounded-2xl shadow-sm">
-            {service.image && (
+            {service.image ? (
               <div className="w-full h-112.5 relative rounded-2xl overflow-hidden shadow-md">
                 <Image
                   src={service.image}
@@ -28,6 +29,17 @@ export default function SingleService({ service }: SingleServiceProps) {
                   className="object-cover"
                   priority
                 />
+              </div>
+            ) : (
+              <div className="w-full h-112.5 relative flex flex-col items-center justify-center bg-slate-100 rounded-2xl shadow-inner border border-slate-200">
+                <ImageOff
+                  size={48}
+                  className="text-slate-400 mb-2 opacity-60"
+                  strokeWidth={1.5}
+                />
+                <span className="text-slate-400 font-medium text-sm">
+                  No image available
+                </span>
               </div>
             )}
 
@@ -59,14 +71,15 @@ export default function SingleService({ service }: SingleServiceProps) {
             <div className="bg-[#1A3079] p-8 rounded-2xl shadow-2xl text-white">
               <h3 className="text-xl font-bold mb-6 border-b border-white/20 pb-4">
                 <span className="text-[#E1E8ED]">
-                  {service.title || "บริการของเรา"}
+                  {getLocalized(service, "title")}
                 </span>
               </h3>
 
               <div className="flex justify-between items-center mb-8 font-bold text-xl">
-                <span className="text-[#E1E8ED]">เรทราคา</span>
+                <span className="text-[#E1E8ED]">{t("rates")}</span>
                 <span className="text-[#e2991a]">
-                  {service.price ? service.price.toLocaleString() : "-"} บาท
+                  {service.price ? service.price.toLocaleString() : "-"}
+                  {t("currency")}
                 </span>
               </div>
 
@@ -74,11 +87,12 @@ export default function SingleService({ service }: SingleServiceProps) {
                 onClick={() => setIsModalOpen(true)}
                 className="w-full bg-[#ff9900] hover:bg-amber-600 text-white font-bold py-5 px-4 rounded-2xl shadow-lg transition-all active:scale-95 text-xl"
               >
-                ชำระเงินเพื่อว่าความ
+                {t("pay")}
               </button>
 
               <p className="text-center mt-6 text-xs text-[#E1E8ED] font-medium">
-                * ชำระเงินผ่านระบบ PromptPay ปลอดภัย 100%
+                {t("prompay")}
+                {/* "pay": "Payment for legal representation", */}
               </p>
             </div>
           </div>

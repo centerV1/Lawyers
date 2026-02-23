@@ -60,7 +60,7 @@ export default function HomeExperience() {
                     }}
                     className="w-full"
                   >
-                    <Button className="w-full bg-[#e2991a] hover:bg-[#c98614] text-white py-6 rounded-lg font-bold">
+                    <Button className="w-full bg-[#e2991a] hover:bg-[#c98614] text-white py-6 rounded-lg font-bold uppercase">
                       {t("details")}
                     </Button>
                   </Link>

@@ -3,8 +3,12 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TeamMember } from "@/data/Team";
+import { useTranslate } from "@/utils/useTranslate";
+import { useTranslations } from "next-intl";
 
 export default function MemberBio({ member }: { member: TeamMember }) {
+  const getLocalized = useTranslate();
+  const t = useTranslations("AboutUs");
   return (
     <section className="py-24 bg-white font-sans">
       <div className="max-w-[1186px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_500px] gap-16 items-start">
@@ -12,19 +16,19 @@ export default function MemberBio({ member }: { member: TeamMember }) {
         <div className="flex flex-col">
           <div className="space-y-2 mb-8 text-left">
             <h2 className="text-5xl font-bold text-[#1A3079] tracking-tight leading-tight">
-              {member.name}
+              {getLocalized(member, "name")}
             </h2>
             <p className="text-2xl font-bold text-[#E39B16]">
-              {member.role}
+               {getLocalized(member, "role")}
             </p>
           </div>
 
           <div className="text-[#1E1E1E] leading-relaxed text-lg whitespace-pre-line mb-10 text-justify">
-            {member.bio}
+             {getLocalized(member, "bio")}
           </div>
 
           <Button className="w-full bg-[#E39B16] hover:bg-[#cf890d] text-white py-7 text-lg font-bold rounded-md shadow-lg transition-all">
-            ติดต่อเรา
+            {t("contract")}
           </Button>
         </div>
 
@@ -32,7 +36,7 @@ export default function MemberBio({ member }: { member: TeamMember }) {
           <div className="relative w-full aspect-[4/5] rounded-sm overflow-hidden shadow-2xl bg-slate-100">
             <Image
               src={member.image}
-              alt={member.name}
+              alt={getLocalized(member, "name") || ""}
               fill
               className="object-cover object-top"
               priority
@@ -45,7 +49,7 @@ export default function MemberBio({ member }: { member: TeamMember }) {
             </div>
             <div>
               <p className="text-2xl font-bold text-[#1A3079]">+66 96-916-4251</p>
-              <p className="text-base text-black font-medium">ติดต่อบริการด้านกฎหมาย</p>
+              <p className="text-base text-black font-medium"> {t("contract2")}</p>
             </div>
           </div>
         </div>

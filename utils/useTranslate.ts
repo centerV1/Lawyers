@@ -18,7 +18,4 @@ export function useTranslate<T extends Record<string, unknown>>() {
 
     return "";
   };
-
-
-
 }

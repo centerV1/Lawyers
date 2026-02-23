@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Scale } from "lucide-react";
-
+import { useTranslations } from "next-intl";
 export default function Hero() {
+    const t = useTranslations("Contact");
   return (
     <section className="relative h-200 w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -11,14 +12,14 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-[1184px] mx-auto px-6 flex flex-col items-center text-center text-white">
         <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-[#e2991a] mb-6">
-          THONGRAK NITISRI LAW
+           {t("company_name")}
         </h3>
         <Scale className="h-12 w-12 text-[#e2991a] mb-8" />
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">บริการทางกฎหมายที่ดีที่สุด</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6"> {t("service")}</h1>
         <p className="max-w-2xl text-lg text-slate-200 mb-16">
-          เราช่วยให้ลูกค้ายังคงสามารถแข่งขันได้ในภูมิทัศน์ทางกฎหมายที่เปลี่ยนแปลงไป
+           {t("help")}
         </p>
-        <h2 className="text-5xl font-bold mb-8">ติดต่อ <span className="text-[#e2991a]">เรา</span></h2>
+        <h2 className="text-5xl font-bold mb-8">{t("contact")} <span className="text-[#e2991a]">{t("us")}</span></h2>
         <div className="flex items-center justify-center w-full max-w-md gap-4">
           <div className="h-px bg-[#e2991a]/50 flex-1"></div>
           <Scale className="h-6 w-6 text-[#e2991a]" />

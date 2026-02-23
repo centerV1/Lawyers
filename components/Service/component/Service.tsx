@@ -25,6 +25,7 @@ export default function Service() {
                 <Image
                   src={Lawyer}
                   alt={getLocalized(item, "title") || ""}
+                  //{getLocalized(item, "title"}
                   fill
                   className="object-cover transition-transform duration-500"
                 />

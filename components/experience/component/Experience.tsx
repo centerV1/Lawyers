@@ -45,7 +45,7 @@ export default function ExperienceList() {
                       params: { experienceId: experience.experienceId },
                     }}
                   >
-                    <Button className="w-full bg-[#e2991a] hover:bg-[#c98614] text-white text-xl py-7 rounded-xl font-bold transition-all duration-300">
+                    <Button className="w-full bg-[#e2991a] hover:bg-[#c98614] text-white text-xl py-7 uppercase rounded-xl font-bold transition-all duration-300">
                       {t("details")}
                     </Button>
                   </Link>

@@ -1,8 +1,12 @@
+import { useTranslations } from "next-intl";
+
 export default function PaymentSteps({ currentStep }: { currentStep: number }) {
+  const t = useTranslations("Payment.Steps");
+
   const steps = [
-    { id: 1, label: "เพื่อเพิ่มเพื่อน" },
-    { id: 2, label: "ชำระเงิน" },
-    { id: 3, label: "ส่งหลักฐาน/ส่งเรื่อง" },
+    { id: 1, label: t("add_friend") },
+    { id: 2, label: t("payment") },
+    { id: 3, label: t("submit_proof") },
   ];
 
   return (

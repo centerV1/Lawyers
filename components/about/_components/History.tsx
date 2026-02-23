@@ -43,7 +43,7 @@ export default function History() {
                   +66 96-916-4251
                 </p>
                 <p className="text-base text-black font-medium">
-                  ติดต่อบริการด้านกฎหมาย
+                   {t("contract2")}
                 </p>
               </div>
             </div>

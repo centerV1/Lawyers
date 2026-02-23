@@ -13,7 +13,7 @@ interface OtherExperiencesProps {
 
 export default function OtherExperiences({ currentId }: OtherExperiencesProps) {
   const getLocalized = useTranslate<ExperienceItem>();
-  const t = useTranslations("Service");
+  const t = useTranslations("Experience");
 
   const otherItems = experienceData.filter(
     (item) => item.experienceId !== currentId,
@@ -26,10 +26,10 @@ export default function OtherExperiences({ currentId }: OtherExperiencesProps) {
       <div className="max-w-296.5 mx-auto px-4 text-center">
         <div className="mb-12 space-y-4">
           <h4 className="text-[#e2991a] font-bold text-sm tracking-[0.3em] uppercase">
-            THONGRAK NITISRI LAW
+           {t("company_name")}
           </h4>
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            ประสบการณ์ <span className="text-[#e2991a]">อื่นๆ</span>
+            {t("experience")} <span className="text-[#e2991a]">{t("other")}</span>
           </h2>
 
           <div className="relative flex items-center justify-center pt-8">

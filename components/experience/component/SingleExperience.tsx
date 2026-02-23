@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ExperienceItem } from "@/data/Experience";
-import { Facebook, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Linkedin , ImageOff } from "lucide-react";
 import { useTranslate } from "@/utils/useTranslate";
 
 interface SingleExperienceProps {
@@ -18,16 +18,28 @@ export default function SingleExperience({
     <section className="mt-12">
       <div className="max-w-296.5 mx-auto px-4">
         <div className="bg-[#f8f9fa] rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-          {experience.image && (
-            <div className="relative w-full h-125">
+          {experience.detailImage ?  (
+             <div className="w-full h-112.5 relative rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={experience.detailImage}
                 alt={getLocalized(experience, "title") || ""}
                 fill
                 className="object-cover"
+                  priority
               />
             </div>
-          )}
+          ) : (
+              <div className="w-full h-112.5 relative flex flex-col items-center justify-center bg-slate-100 rounded-2xl shadow-inner border border-slate-200">
+                <ImageOff
+                  size={48}
+                  className="text-slate-400 mb-2 opacity-60"
+                  strokeWidth={1.5}
+                />
+                <span className="text-slate-400 font-medium text-sm">
+                  No image available
+                </span>
+              </div>
+            )}
           <div className="p-8 md:p-12 space-y-8">
             <header>
               <h2 className="text-3xl font-bold text-slate-900 mb-2">

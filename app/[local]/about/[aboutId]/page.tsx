@@ -1,16 +1,23 @@
-// app/about/[id]/page.tsx
 import { notFound } from "next/navigation";
 import { teamData } from "@/data/Team";
 import Hero from "@/components/about/_components/Hero";
 import MemberBio from "@/components/about/_components/MemberBio";
 import OtherTeam from "@/components/about/_components/OtherTeam";
 
-export default async function TeamMemberDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+type PageProps = {
+  params: Promise<{
+    aboutId: string;
+  }>;
+};
+
+export default async function TeamMemberDetailPage({ params }:PageProps) {
+  const { aboutId } = await params;
+  const currentId = Number(aboutId);
+  const member = teamData.find((item) => item.aboutId === Number(aboutId),);
   
-  const member = teamData.find((t) => t.id === id);
-  
-  if (!member) notFound();
+    if (!member) {
+    notFound();
+  }
 
   return (
     <main className="min-h-screen bg-white">
@@ -18,7 +25,7 @@ export default async function TeamMemberDetailPage({ params }: { params: Promise
       
       <MemberBio member={member} />
       
-      <OtherTeam currentId={id} />
+      <OtherTeam currentId={currentId} />
     </main>
   );
 }

@@ -4,7 +4,7 @@ import { Link } from "@/i18n/routing";
 import { Logowhite } from "../Logo/logowhite";
 import { serviceData } from "@/data/Service";
 import { ServiceItem } from "@/data/Service";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 import { useTranslate } from "@/utils/useTranslate";
 
 const Footer = () => {

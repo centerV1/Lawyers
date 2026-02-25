@@ -1,4 +1,4 @@
-import Pic1 from "@/public/History.jpg";
+import Pic1 from "@/public/History.webp";
 
 import { StaticImageData } from "next/image";
 

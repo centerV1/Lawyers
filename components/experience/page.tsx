@@ -1,5 +1,3 @@
-"use client";
-
 import Hero from "./component/Hero";
 import Experience from "./component/Experience";
 import OurCustomers from "../about/_components/OurCustomers";

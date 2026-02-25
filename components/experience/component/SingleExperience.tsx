@@ -24,6 +24,7 @@ export default function SingleExperience({
                 src={experience.detailImage}
                 alt={getLocalized(experience, "title") || ""}
                 fill
+                sizes="100vw"
                 className="object-cover"
                   priority
               />

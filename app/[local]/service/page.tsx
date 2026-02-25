@@ -1,10 +1,10 @@
 // app/service/page.tsx
-import ServicePage from "@/components/Service/page";
+import ServicePageContent from "@/components/Service/page";
 
-export default function page() {
+export default function ServicePage() {
   return (
     <div>
-      <ServicePage/>
+      <ServicePageContent/>
     </div>
   )
 }

@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative h-200 w-full flex flex-col items-center justify-center overflow-hidden ">
       <div className="absolute inset-0 z-0">
-        <Image src="/law-hero.png" alt="Background" fill className="object-cover" priority />
+        <Image src="/law-hero.webp" alt="Background" fill sizes="100vw" className="object-cover" priority />
         <div className="absolute inset-0 bg-[#4F200D]/85 mix-blend-multiply" />
       </div>
 

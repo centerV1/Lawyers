@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Lawyer from "../../public/Lawyer.jpg";
+import Lawyer from "../../public/Lawyer.webp";
 import { Button } from "@/components/ui/button"; 
 import { Separator } from "@/components/ui/separator";
 import { Scale, Phone, Mail } from "lucide-react"; 
@@ -17,8 +17,8 @@ export default function OnFooter() {
           src={Lawyer}
           alt="Lawyer Office Background"
           fill
+          sizes="100vw"
           className="object-cover object-center"
-          priority
         />
         <div className="absolute inset-0 bg-[#1e2336]/90 mix-blend-multiply" />
       </div>

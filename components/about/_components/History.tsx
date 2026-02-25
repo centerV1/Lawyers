@@ -29,9 +29,10 @@ export default function History() {
         <div className="relative flex justify-end">
           <div className="relative w-full max-w-121 h-[700px] rounded-sm overflow-hidden shadow-2xl">
             <Image
-              src="/lawyer-profile.png"
+              src="/lawyer-profile.webp"
               alt="Lawyer"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-top"
             />
             <div className="absolute top-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-2 pr-8 shadow-2xl rounded-lg flex items-center gap-4 min-w-[340px]">

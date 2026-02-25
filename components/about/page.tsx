@@ -1,4 +1,3 @@
-"use client";
 import Vision from "../Home/components/Vision";
 import Hero from "./_components/Hero";
 import History from "./_components/History";

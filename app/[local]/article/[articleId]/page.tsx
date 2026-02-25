@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { articleData } from "@/data/Article";
 import HeroArticle from "@/components/Article/component/HeroArticle";
@@ -9,6 +10,14 @@ type PageProps = {
     articleId: string;
   }>;
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { articleId } = await params;
+  const article = articleData.find((item) => item.articleId === Number(articleId));
+  return {
+    title: article?.title_th || article?.title_en || "บทความ",
+  };
+}
 
 export default async function ArticleDetailPage({ params }: PageProps) {
   const { articleId } = await params;

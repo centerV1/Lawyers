@@ -38,11 +38,11 @@ export default function OurCustomers() {
     <section className="relative w-full py-24 overflow-hidden font-sans">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/law-hero.png"
+          src="/law-hero.webp"
           alt="Background"
           fill
+          sizes="100vw"
           className="object-cover"
-          priority
         />
         <div className="absolute inset-0 bg-white/85" />
       </div>
@@ -85,6 +85,7 @@ export default function OurCustomers() {
                       src={item.image}
                        alt={getLocalized(item, "title") || ""}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover"
                     />
                   </div>

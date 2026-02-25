@@ -19,6 +19,7 @@ export default function SingleArticle({ article }: SingleArticleProps) {
               src={article.detailImage}
               alt={getLocalized(article, "title") || "article image"}
               fill
+              sizes="100vw"
               className="object-cover"
             />
           </div>

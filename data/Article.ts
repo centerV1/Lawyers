@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import Pic1 from "@/public/History.jpg";
+import Pic1 from "@/public/History.webp";
 
 export interface ArticleItem {
   articleId: number;

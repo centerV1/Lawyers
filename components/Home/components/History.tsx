@@ -9,14 +9,14 @@ import { Separator } from "@/components/ui/separator";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useTranslations } from "next-intl";
 
-import Pic1 from "@/public/History.jpg";
-import Pic2 from "@/public/History2.jpg";
-import Pic3 from "@/public/History.jpg";
-import Pic4 from "@/public/History.jpg";
-import Pic5 from "@/public/History.jpg";
-import Pic6 from "@/public/History.jpg";
-import Pic7 from "@/public/History.jpg";
-import Certificate from "@/public/Certificate.png";
+import Pic1 from "@/public/History.webp";
+import Pic2 from "@/public/History2.webp";
+import Pic3 from "@/public/History.webp";
+import Pic4 from "@/public/History.webp";
+import Pic5 from "@/public/History.webp";
+import Pic6 from "@/public/History.webp";
+import Pic7 from "@/public/History.webp";
+import Certificate from "@/public/Certificate.webp";
 
 export default function History() {
   const t = useTranslations("History");
@@ -86,7 +86,7 @@ export default function History() {
                 />
               </CardContent>
               <Card className="row-span-2 overflow-hidden border-0 shadow-sm rounded-xl relative h-full min-h-75">
-                <Image src={Pic3} alt="Team 3" fill className="object-cover" />
+                <Image src={Pic3} alt="Team 3" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
               </Card>
               <CardContent className="p-0 h-full relative">
                 <Image
@@ -96,7 +96,7 @@ export default function History() {
                 />
               </CardContent>
               <Card className="row-span-2 overflow-hidden border-0 shadow-sm rounded-xl relative h-full min-h-75 md:col-start-2">
-                <Image src={Pic7} alt="Team 7" fill className="object-cover" />
+                <Image src={Pic7} alt="Team 7" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
               </Card>
               <CardContent className="p-0 h-full relative">
                 <Image
@@ -123,6 +123,7 @@ export default function History() {
                     src={Certificate}
                     alt="Certificate"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 400px"
                     className="object-contain"
                   />
                 </AspectRatio>

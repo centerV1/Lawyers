@@ -1,4 +1,3 @@
-"use client";
 import Hero from "@/components/Article/component/Hero"; 
 import ArticleList from "./component/Article";
 import OurCustomers from "../about/_components/OurCustomers";

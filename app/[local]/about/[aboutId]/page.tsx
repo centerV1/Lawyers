@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { teamData } from "@/data/Team";
 import Hero from "@/components/about/_components/Hero";
@@ -9,6 +10,14 @@ type PageProps = {
     aboutId: string;
   }>;
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { aboutId } = await params;
+  const member = teamData.find((item) => item.aboutId === Number(aboutId));
+  return {
+    title: member?.name_th || member?.name_en || "ทีมงาน",
+  };
+}
 
 export default async function TeamMemberDetailPage({ params }:PageProps) {
   const { aboutId } = await params;

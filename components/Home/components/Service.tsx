@@ -3,12 +3,12 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Lawyer from "@/public/Lawyer.jpg";
+import Lawyer from "@/public/Lawyer.webp";
 import { Separator } from "../../ui/separator";
 import { serviceData } from "@/data/Service";
 import { useTranslate } from "@/utils/useTranslate";
 import { ServiceItem } from "@/data/Service";
-import { useTranslations } from "use-intl";
+import { useTranslations } from "next-intl";
 
 export default function Service() {
   const getLocalized = useTranslate<ServiceItem>();
@@ -23,6 +23,7 @@ export default function Service() {
           alt="Background"
           fill
           className="object-cover"
+          sizes="100vw"
           priority
         />
         <div className="absolute inset-0 bg-slate-900/80" />
@@ -53,6 +54,7 @@ export default function Service() {
                   src={Lawyer}
                   alt={"pic"}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 transition-colors" />

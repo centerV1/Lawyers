@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Lawyer from "@/public/Lawyer.jpg";
+import Lawyer from "@/public/Lawyer.webp";
 import { serviceData, ServiceItem } from "@/data/Service";
 import { useTranslate } from "@/utils/useTranslate";
 import { useTranslations } from "next-intl";
@@ -25,8 +25,8 @@ export default function Service() {
                 <Image
                   src={Lawyer}
                   alt={getLocalized(item, "title") || ""}
-                  //{getLocalized(item, "title"}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 transition-colors" />

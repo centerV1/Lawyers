@@ -7,7 +7,7 @@ export default function StepTransfer({ serviceTitle, price }: { serviceTitle: st
   return (
     <div className="flex flex-col items-center space-y-6 animate-in slide-in-from-bottom-4 duration-500 text-center">
       <div className="bg-white p-4 rounded-2xl shadow-lg border border-white">
-        <Image src="/promptpay-qr.png" alt="PromptPay" width={200} height={310} className="rounded-lg" />
+        <Image src="/promptpay-qr.webp" alt="PromptPay" width={200} height={310} className="rounded-lg" />
       </div>
       <div className="space-y-1">
         <p className="font-bold text-slate-800 text-lg">{t("bank_name")}</p>

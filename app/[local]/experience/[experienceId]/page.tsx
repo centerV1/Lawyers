@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { experienceData } from "@/data/Experience";
 import ExperienceHero from "@/components/experience/component/Hero";
@@ -9,6 +10,14 @@ type PageProps = {
     experienceId: string 
   }>;
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { experienceId } = await params;
+  const experience = experienceData.find((item) => item.experienceId === Number(experienceId));
+  return {
+    title: experience?.title_th || experience?.title_en || "ประสบการณ์",
+  };
+}
 
 export default async function ExperienceDetailPage({ params }: PageProps) {
   const { experienceId } = await params;

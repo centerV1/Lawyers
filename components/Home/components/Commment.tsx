@@ -14,13 +14,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import Pic1 from "@/public/History.jpg";
-import Pic2 from "@/public/History2.jpg";
-import Pic3 from "@/public/History.jpg";
-// import Pic4 from "@/public/History.jpg";
-// import Pic5 from "@/public/History.jpg";
-// import Pic6 from "@/public/History.jpg";
-// import Pic7 from "@/public/History.jpg";
+import Pic1 from "@/public/History.webp";
+import Pic2 from "@/public/History2.webp";
+import Pic3 from "@/public/History.webp";
+// import Pic4 from "@/public/History.webp";
+// import Pic5 from "@/public/History.webp";
+// import Pic6 from "@/public/History.webp";
+// import Pic7 from "@/public/History.webp";
 import { Separator } from "../../ui/separator";
 
 const testimonials = [
@@ -87,6 +87,7 @@ export default function Comment() {
                             src={item.image}
                             alt={item.title}
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className="object-cover transition-transform duration-500"
                           />
                         </div>

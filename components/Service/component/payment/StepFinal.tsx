@@ -7,7 +7,7 @@ export default function StepFinal({ serviceTitle }: { serviceTitle: string }) {
   return (
     <div className="flex flex-col space-y-6 animate-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-col md:flex-row gap-6 items-center bg-white/60 p-6 rounded-3xl border border-white">
-        <Image src="/slip-example.png" alt="Slip" width={200} height={190} className="rounded-lg shadow-md" />
+        <Image src="/slip-example.webp" alt="Slip" width={200} height={190} className="rounded-lg shadow-md" />
         <div className="flex-1 space-y-4 text-left">
           <p className="font-bold text-slate-700">
             {t("proof_of_transfer")} <span className="text-red-500">{t("slip")}</span>

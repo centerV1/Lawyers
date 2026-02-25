@@ -53,6 +53,7 @@ export default function OtherExperiences({ currentId }: OtherExperiencesProps) {
                   src={item.listImage}
                   alt={getLocalized(item, "title") || ""}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>

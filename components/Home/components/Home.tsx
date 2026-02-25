@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Lawyer from "@/public/Lawyer.jpg";
+import Lawyer from "@/public/Lawyer.webp";
 import { Button } from "@/components/ui/button";
-// import SignatureImg from "@/public/signature-line.png";
+// import SignatureImg from "@/public/signature-line.webp";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
@@ -17,6 +17,7 @@ export default function HomeContent() {
           alt="Lawyer Background"
           fill
           priority
+          sizes="100vw"
           className="fill"
         />
 

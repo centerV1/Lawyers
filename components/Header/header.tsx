@@ -50,12 +50,12 @@ const flagItems = [
   },
 ];
 const menuItems = [
-  { name_th: "หน้าแรก",name_en: "Home", href: "/" },
-  { name_th: "เกี่ยวกับเรา",name_en: "About", href: "/about" },
-  { name_th: "บริการของเรา",name_en: "Our Service", href: "/service" },
-  { name_th: "ประสบการณ์ของเรา",name_en: "Experience", href: "/experience" },
-  { name_th: "บทความ",name_en: "Article", href: "/article" },
-  { name_th: "ติดต่อเรา",name_en: "Contact", href: "/contact" },
+  { name_th: "หน้าแรก", name_en: "Home", href: "/" },
+  { name_th: "เกี่ยวกับเรา", name_en: "About", href: "/about" },
+  { name_th: "บริการของเรา", name_en: "Our Service", href: "/service" },
+  { name_th: "ประสบการณ์ของเรา", name_en: "Experience", href: "/experience" },
+  { name_th: "บทความ", name_en: "Article", href: "/article" },
+  { name_th: "ติดต่อเรา", name_en: "Contact", href: "/contact" },
 ] as const;
 
 const socialItems = [
@@ -147,7 +147,7 @@ export const HeroHeader = () => {
                           isScrolled && "text-[#1A3079]",
                         )}
                       >
-                        {getLocalized(item,'name')}
+                        {getLocalized(item, "name")}
                       </span>
                     </Link>
                   </li>
@@ -164,7 +164,7 @@ export const HeroHeader = () => {
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
                       >
-                        <span> {getLocalized(item,'name')}</span>
+                        <span> {getLocalized(item, "name")}</span>
                       </Link>
                     </li>
                   ))}
@@ -172,12 +172,7 @@ export const HeroHeader = () => {
               </div>
 
               <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 mt-4 lg:mt-0">
-                <div
-                  className={cn(
-                    "flex items-center gap-3 pr-0 lg:pr-4 lg:border-r",
-                    isScrolled ? "border-gray-200" : "border-black",
-                  )}
-                >
+                <div className="flex items-center gap-3 pr-0 lg:pr-4 lg:border-r border-black">
                   {flagItems.map((item, index) => (
                     <Link
                       key={index}

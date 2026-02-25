@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import Pic1 from "@/public/History.jpg";
-import DetailPic1 from "@/public/Lawyer.jpg";
+import Pic1 from "@/public/History.webp";
+import DetailPic1 from "@/public/Lawyer.webp";
 
 export interface ExperienceItem {
   experienceId: number;

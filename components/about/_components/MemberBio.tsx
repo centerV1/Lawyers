@@ -38,6 +38,7 @@ export default function MemberBio({ member }: { member: TeamMember }) {
               src={member.image}
               alt={getLocalized(member, "name") || ""}
               fill
+              sizes="(max-width: 1024px) 100vw, 500px"
               className="object-cover object-top"
               priority
             />

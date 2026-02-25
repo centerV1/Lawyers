@@ -1,7 +1,7 @@
 // app/contact/page.tsx
 import Contact from "@/components/contact/page";
 
-export default function page() {
+export default function ContactPage() {
   return (
     <div>
       <Contact />

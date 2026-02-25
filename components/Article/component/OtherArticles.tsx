@@ -44,7 +44,7 @@ export default function OtherArticles({ currentId }: OtherArticlesProps) {
           {otherItems.map((item) => (
             <div key={item.articleId} className="group bg-[#fff5f5] rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full text-center">
               <div className="relative h-44 w-full overflow-hidden">
-                <Image src={item.listImage} alt={getLocalized(item,"title") } fill className="object-cover transition-transform group-hover:scale-110" />
+                <Image src={item.listImage} alt={getLocalized(item,"title") } fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform group-hover:scale-110" />
               </div>
 
               <div className="relative px-5 pb-6 pt-10 flex flex-col flex-1 items-center justify-between">

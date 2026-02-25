@@ -10,11 +10,11 @@ export default function ContactInfo() {
       <div className="flex items-center gap-3">
         <div className="relative w-[80px] h-[80px]">
           <Image
-            src="/logo-thongrak.png"
+            src="/logo-thongrak.webp"
             alt="Thongrak Nitisri Law Logo"
             fill
+            sizes="80px"
             className="object-contain"
-            priority
           />
         </div>
 

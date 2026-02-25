@@ -11,7 +11,7 @@ export interface CustomerItem {
 export const customersData = [
   {
     id: 1,
-    image: "/customer-1.png",
+    image: "/customer-1.webp",
     title_th: "Lawyer Man & Partners",
     title_en: "Lawyer Man & Partners",
     description_th:
@@ -20,7 +20,7 @@ export const customersData = [
   },
   {
     id: 2,
-    image: "/customer-2.png",
+    image: "/customer-2.webp",
     title_th: "Lawyer Man & Partners",
     title_en: "Lawyer Man & Partners",
     description_th:
@@ -29,7 +29,7 @@ export const customersData = [
   },
   {
     id: 3,
-    image: "/customer-3.png",
+    image: "/customer-3.webp",
     title_th: "Lawyer Man & Partners",
     title_en: "Lawyer Man & Partners",
     description_th:
@@ -39,7 +39,7 @@ export const customersData = [
   },
   {
     id: 4,
-    image: "/customer-4.png",
+    image: "/customer-4.webp",
     title_th: "Lawyer Man & Partners",
     title_en: "Lawyer Man & Partners",
     description_th: "ภาพถ่ายกลุ่มที่ 4",
@@ -47,7 +47,7 @@ export const customersData = [
   },
   {
     id: 5,
-    image: "/customer-5.png",
+    image: "/customer-5.webp",
     title_th: "Lawyer Man & Partners",
     title_en: "Lawyer Man & Partners",
     description_th: "ภาพถ่ายกลุ่มที่ 5",

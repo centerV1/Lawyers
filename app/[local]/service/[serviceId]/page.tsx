@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { serviceData } from "@/data/Service";
 import SingleService from "@/components/Service/component/SingleService";
@@ -9,6 +10,14 @@ type PageProps = {
     serviceId: string;
   }>;
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { serviceId } = await params;
+  const service = serviceData.find((item) => item.serviceId === Number(serviceId));
+  return {
+    title: service?.title_th || service?.title_en || "บริการ",
+  };
+}
 
 export default async function ServicePage({ params }: PageProps) {
   const { serviceId } = await params;

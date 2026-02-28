@@ -27,18 +27,20 @@ const flagItems = [
     viewBox: "0 0 60 30",
     content: (
       <>
-        <clipPath id="s">
-          <path d="M0,0 v30 h60 v-30 z" />
-        </clipPath>
-        <clipPath id="t">
-          <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
-        </clipPath>
-        <g clipPath="url(#s)">
+        <defs>
+          <clipPath id="uk-s">
+            <path d="M0,0 v30 h60 v-30 z" />
+          </clipPath>
+          <clipPath id="uk-t">
+            <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
+          </clipPath>
+        </defs>
+        <g clipPath="url(#uk-s)">
           <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
           <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6" />
           <path
             d="M0,0 L60,30 M60,0 L0,30"
-            clipPath="url(#t)"
+            clipPath="url(#uk-t)"
             stroke="#C8102E"
             strokeWidth="4"
           />
@@ -135,39 +137,54 @@ export const HeroHeader = () => {
 
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
               <ul className="flex gap-8 text-sm">
-                {menuItems.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.href}
-                      className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                    >
-                      <span
-                        className={cn(
-                          "text-slate-800 text-base font-bold",
-                          isScrolled && "text-[#1A3079]",
-                        )}
+                {menuItems.map((item, index) => {
+                  const isActive = pathname === item.href;
+
+                  return (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
                       >
-                        {getLocalized(item, "name")}
-                      </span>
-                    </Link>
-                  </li>
-                ))}
+                        <span
+                          className={cn(
+                            "text-slate-800 text-base font-bold pb-1 transition-all",
+                            isScrolled && "text-[#1A3079]",
+                            isActive &&
+                              "border-b-2 border-[#FF9A00] text-[#FF9A00] lg:text-[#FF9A00]",
+                          )}
+                        >
+                          {getLocalized(item, "name")}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
             <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
                 <ul className="space-y-6 text-base">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                      >
-                        <span> {getLocalized(item, "name")}</span>
-                      </Link>
-                    </li>
-                  ))}
+                  {menuItems.map((item, index) => {
+                    const isActive = pathname === item.href;
+
+                    return (
+                      <li key={index}>
+                        <Link
+                          href={item.href}
+                          className={cn(
+                            "block duration-150 w-fit pb-1",
+                            isActive
+                              ? "text-[#FF9A00] font-bold border-b-2 border-[#FF9A00]"
+                              : "text-slate-600 hover:text-slate-900 font-medium",
+                          )}
+                        >
+                          <span>{getLocalized(item, "name")}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
@@ -187,7 +204,9 @@ export const HeroHeader = () => {
                     >
                       <svg
                         viewBox={item.viewBox}
-                        className="w-10 h-auto rounded-sm shadow-sm border border-gray-100"
+                        className="w-8 h-5 shadow-sm border rounded-sm border-gray-100"
+                        preserveAspectRatio="none"
+                        xmlns="http://www.w3.org/2000/svg"
                       >
                         {item.content}
                       </svg>

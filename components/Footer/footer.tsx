@@ -29,17 +29,31 @@ const Footer = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="bg-[#e89a10] p-1.5 rounded-sm shrink-0 mt-1">
-                  <MapPin className="h-4 w-4 text-white" />
-                </div>
-                <span className="leading-relaxed">{t("address1")}</span>
+                <a
+                  href="https://www.google.com/maps/place/Regus/@13.7450152,100.5395563,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecfb65be9f3:0xd70036f489158bd3!8m2!3d13.7450152!4d100.5395563!16s%2Fg%2F11b7hl17bv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 hover:text-white transition-colors group"
+                  target="_blank"
+                >
+                  <div className="bg-[#e89a10] p-1.5 rounded-sm shrink-0 mt-1">
+                    <MapPin className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="leading-relaxed hover:text-[#e89a10]">{t("address1")}</span>
+                </a>
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="bg-[#e89a10] p-1.5 rounded-sm shrink-0 mt-1">
-                  <MapPin className="h-4 w-4 text-white" />
-                </div>
-                <span className="leading-relaxed">{t("address2")}</span>
+                <a
+                  href="https://www.google.com/maps/place/Regus/@13.7450152,100.5395563,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecfb65be9f3:0xd70036f489158bd3!8m2!3d13.7450152!4d100.5395563!16s%2Fg%2F11b7hl17bv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 hover:text-white transition-colors group"
+                  target="_blank"
+                >
+                  <div className="bg-[#e89a10] p-1.5 rounded-sm shrink-0 mt-1">
+                    <MapPin className="h-4 w-4 text-white" />
+                  </div>
+                  <span className="leading-relaxed hover:text-[#e89a10]">{t("address2")}</span>
+                </a>
               </div>
             </div>
           </div>
@@ -68,7 +82,6 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-3">
-            <h3 className="text-xl font-medium mb-6 lg:hidden">ติดต่อเรา</h3>
             <a href="tel:+66999488789" className="group block">
               <div className="bg-[#e89a10] rounded-md p-4 flex items-center gap-4 text-white shadow-lg hover:bg-[#d68c0e] transition-all duration-300">
                 <div className="bg-[#0e1b3c] p-3 rounded-md shrink-0 group-hover:bg-[#1a2d5c] transition-colors">

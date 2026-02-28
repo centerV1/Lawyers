@@ -8,7 +8,7 @@ export default function ContactInfo() {
   return (
     <div className="space-y-12">
       <div className="flex items-center gap-3">
-        <div className="relative w-[80px] h-[80px]">
+        <div className="relative w-20 h-20">
           <Image
             src="/logo-thongrak.webp"
             alt="Thongrak Nitisri Law Logo"
@@ -30,6 +30,7 @@ export default function ContactInfo() {
           icon={<MapPin className="text-white w-5 h-5" />}
           title={t("address")}
           label={t("location")}
+          href="https://www.google.com/maps/place/Regus/@13.7450152,100.5395563,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecfb65be9f3:0xd70036f489158bd3!8m2!3d13.7450152!4d100.5395563!16s%2Fg%2F11b7hl17bv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
         />
         <ContactItem
           icon={<Phone className="text-white w-5 h-5" />}
@@ -50,14 +51,16 @@ function ContactItem({
   icon,
   title,
   label,
+  href,
 }: {
   icon: React.ReactNode;
   title: string;
   label: string;
+  href?: string;
 }) {
-  return (
-    <div className="flex gap-5">
-      <div className="mt-1 bg-[#e2991a] p-2 rounded-full h-fit flex-shrink-0">
+  const content = (
+    <>
+      <div className="mt-1 bg-[#e2991a] p-2 rounded-full h-fit shrink-0">
         {icon}
       </div>
       <div>
@@ -66,6 +69,21 @@ function ContactItem({
         </p>
         <p className="text-slate-400 text-sm font-medium">{label}</p>
       </div>
-    </div>
+    </>
   );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex gap-5 hover:opacity-80 transition-opacity cursor-pointer group"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <div className="flex gap-5">{content}</div>;
 }

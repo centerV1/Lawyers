@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/footer";
 import OnFooter from "@/components/Footer/onfooter";
 
 import { notFound } from "next/navigation";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { Locale, routing } from "@/i18n/routing";
 
@@ -20,15 +20,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Thongrak Nitisri Law | สำนักงานกฎหมายธงรักษ์นิติศรี",
-    template: "%s | Thongrak Nitisri Law",
-  },
-  description:
-    "สำนักงานกฎหมายธงรักษ์นิติศรี ให้บริการด้านกฎหมายครบวงจร ปรึกษาทนายความ ว่าความทุกศาล — Thongrak Nitisri Law Office, full-service legal consultancy.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ local: string }>;
+}): Promise<Metadata> {
+  const { local } = await params;
 
+  const t = await getTranslations({ locale: local, namespace: "Contact" });
+
+  return {
+    title: {
+      default: t("company_name"), 
+      template: `%s | ${t("company_name")}`,
+    },
+    description: "สำนักงานกฎหมายธงรักษ์นิติศรี ให้บริการด้านกฎหมายครบวงจร ปรึกษาทนายความ ว่าความทุกศาล",
+  };
+}
 export default async function RootLayout({
   children,
   params,

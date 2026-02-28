@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Lawyer from "@/public/Lawyer.webp";
 import { Button } from "@/components/ui/button";
-import SignatureImg from "@/public/signature-line.png";
+import SignatureImg from "@/public/signature-line.webp";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 

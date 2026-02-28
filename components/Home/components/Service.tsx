@@ -26,7 +26,7 @@ export default function Service() {
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-slate-900/80" />
+        <div className="absolute inset-0 bg-[#4F200D]/85" />
       </div>
 
       <div className="relative z-10 container max-w-6xl mx-auto px-4">
@@ -51,8 +51,8 @@ export default function Service() {
             >
               <div className="relative h-40 w-full overflow-hidden">
                 <Image
-                  src={Lawyer}
-                  alt={"pic"}
+                  src={item.imageService || Lawyer}
+                  alt={getLocalized(item, "title") || "service pic"}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500"

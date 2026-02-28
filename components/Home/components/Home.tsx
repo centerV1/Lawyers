@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Lawyer from "@/public/Lawyer.webp";
 import { Button } from "@/components/ui/button";
-// import SignatureImg from "@/public/signature-line.webp";
+import SignatureImg from "@/public/signature-line.png";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
@@ -34,7 +34,7 @@ export default function HomeContent() {
             {t("company_name")}
           </h2>
 
-          {/* <div className="absolute left-0 right-0 bottom-0 w-full flex justify-center translate-y-2">
+           <div className="absolute left-0 right-0 bottom-0 w-full flex justify-center translate-y-1">
             <Image
               src={SignatureImg}
               alt="Signature Line"
@@ -43,11 +43,11 @@ export default function HomeContent() {
               className="w-full h-auto object-contain pointer-events-none opacity-95"
               priority
             />
-          </div> */}
+          </div> 
         </div>
 
-        <div className="mt-8">
-          <p className="text-lg sm:text-xl md:text-2xl font-bold text-gray-100 max-w-5xl mx-auto leading-relaxed">
+        <div className="mt-5">
+          <p className="text-lg sm:text-xl md:text-xl font-bold text-gray-100 max-w-5xl mx-auto leading-relaxed">
             {t("title2")}
           </p>
         </div>

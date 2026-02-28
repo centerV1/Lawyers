@@ -40,7 +40,7 @@ export default function ArticleList() {
                     pathname: "/article/[articleId]",
                     params: { articleId: item.articleId },
                   }}>
-                    <Button className="uppercase w-full bg-[#e89a10] hover:bg-[#cf890d] text-white py-6 rounded-md font-bold">
+                    <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium uppercase rounded-md py-2 shadow-sm">
                       {t("details")}
                     </Button>
                   </Link>

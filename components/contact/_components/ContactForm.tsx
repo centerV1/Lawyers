@@ -29,7 +29,7 @@ export default function ContactForm() {
         </div>
         <div className="space-y-2">
           <label className="text-sm font-bold text-slate-400 ml-1">{t("form_details")}</label>
-          <Textarea className="bg-white border-none min-h-[150px] focus-visible:ring-[#e2991a]" name="details" />
+          <Textarea className="bg-white border-none min-h-37.5 focus-visible:ring-[#e2991a]" name="details" />
         </div>
         <Button className="w-full bg-[#e2991a] hover:bg-[#c98616] text-white py-8 text-xl font-bold rounded-md mt-4 uppercase transition-all">
           {t("form_submit")}

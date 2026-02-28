@@ -56,7 +56,7 @@ export default function OnFooter() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-8 text-sm md:text-base">
           <div className="flex items-center gap-2">
             <Phone className="w-4 h-4 text-[#e89a10]" />
-            <span>+66 999488789</span>
+            <span>0999488789</span>
           </div>
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4 text-[#e89a10]" />

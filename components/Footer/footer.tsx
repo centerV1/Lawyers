@@ -30,7 +30,7 @@ const Footer = () => {
 
               <div className="flex items-start gap-3">
                 <a
-                  href="https://www.google.com/maps/place/Regus/@13.7450152,100.5395563,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecfb65be9f3:0xd70036f489158bd3!8m2!3d13.7450152!4d100.5395563!16s%2Fg%2F11b7hl17bv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                    href="https://www.google.co.th/maps/place/14°56'45.2%22N+102°03'13.1%22E/@14.9463603,102.0535468,17.98z/data=!4m4!3m3!8m2!3d14.945891!4d102.05363?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 hover:text-white transition-colors group"
                   target="_blank"
@@ -44,7 +44,7 @@ const Footer = () => {
 
               <div className="flex items-start gap-3">
                 <a
-                  href="https://www.google.com/maps/place/Regus/@13.7450152,100.5395563,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecfb65be9f3:0xd70036f489158bd3!8m2!3d13.7450152!4d100.5395563!16s%2Fg%2F11b7hl17bv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://www.google.com/maps/place/14°00'21.6%22N+100°31'15.1%22E/@14.0059366,100.5173225,15z/data=!4m4!3m3!8m2!3d14.0059981!4d100.5208718?authuser=0&entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 hover:text-white transition-colors group"
                   target="_blank"
@@ -89,7 +89,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-lg font-bold tracking-wide">
-                    +66 999488789
+                    0999488789
                   </div>
                   <div className="text-xs font-medium text-white/90">
                     {t("contract")}

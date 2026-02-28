@@ -41,7 +41,7 @@ export default function History() {
               </div>
               <div>
                 <p className="text-2xl font-bold text-[#1A3079]">
-                  +66 96-916-4251
+                  096-916-4251
                 </p>
                 <p className="text-base text-black font-medium">
                    {t("contract2")}

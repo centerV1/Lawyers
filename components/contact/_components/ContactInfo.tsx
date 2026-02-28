@@ -30,11 +30,11 @@ export default function ContactInfo() {
           icon={<MapPin className="text-white w-5 h-5" />}
           title={t("address")}
           label={t("location")}
-          href="https://www.google.com/maps/place/Regus/@13.7450152,100.5395563,17z/data=!3m1!4b1!4m6!3m5!1s0x30e29ecfb65be9f3:0xd70036f489158bd3!8m2!3d13.7450152!4d100.5395563!16s%2Fg%2F11b7hl17bv?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+          href="https://www.google.co.th/maps/place/14°56'45.2%22N+102°03'13.1%22E/@14.9463603,102.0535468,17.98z/data=!4m4!3m3!8m2!3d14.945891!4d102.05363?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
         />
         <ContactItem
           icon={<Phone className="text-white w-5 h-5" />}
-          title="+66 96-916-4251, +66 95-212-9000"
+          title="096-916-4251, 095-212-9000"
           label={t("contact_legal")}
         />
         <ContactItem

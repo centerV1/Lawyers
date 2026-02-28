@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "title": "Expert in all types of legal cases",
-    "company_name": "THONGRAKNITISRI CO LTD.",
+    "company_name": "THONGRAKNITISRI CO LTD",
     "title2": "We are committed to providing the highest standards of legal services to protect the interests of our clients.",
     "consultation": "Legal consultation",
     "allservice": "All our services"
@@ -103,7 +103,7 @@
     "form_phone": "Phone Number",
     "form_details": "Details",
     "form_submit": "Submit",
-    "address": "4, 4/5 Central Tower, 12th Fl., Ratchadamri Rd., Pathum Wan, Pathum Wan, Bangkok, Thailand 10330",
+    "address": "102/8 Moo 5, Nong Chabok Subdistrict, Mueang Nakhon Ratchasima District, Nakhon Ratchasima 30000",
     "location": "Location",
     "contact_legal": "Legal Service Contact",
     "email_label": "Email"

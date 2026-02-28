@@ -51,7 +51,7 @@ export default function Service() {
             >
               <div className="relative h-40 w-full overflow-hidden">
                 <Image
-                  src={item.imageService || Lawyer}
+                  src={item.image || Lawyer}
                   alt={getLocalized(item, "title") || "service pic"}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

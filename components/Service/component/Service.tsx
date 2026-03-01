@@ -23,8 +23,8 @@ export default function Service() {
             >
               <div className="relative h-40 w-full overflow-hidden">
                 <Image
-                  src={Lawyer}
-                  alt={getLocalized(item, "title") || ""}
+                  src={item.imageService || Lawyer}
+                  alt={getLocalized(item, "title") || "service pic"}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500"

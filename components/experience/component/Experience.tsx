@@ -34,7 +34,7 @@ export default function ExperienceList() {
 
               <div className="relative px-6 pb-8 -mt-12 flex-1 flex flex-col">
                 <div className="bg-white rounded-xl p-6 shadow-md border border-gray-50 flex-1 flex experiences-center justify-center text-center">
-                  <p className="text-[#1a3673] text-lg leading-relaxed font-medium">
+                  <p className="text-[#1a3673] text-sm leading-relaxed font-medium line-clamp-6">
                     {getLocalized(experience, "description")}
                   </p>
                 </div>

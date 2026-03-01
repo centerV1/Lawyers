@@ -5,11 +5,11 @@ export default function Vision() {
   return (
     <div className="w-full flex flex-col md:flex-row min-h-150 font-sans">
       
-      <div className="w-full md:w-[45%] bg-[#dfa83c] text-[#1A3079] px-8 pb-10 pt-16 md:pt-24 md:px-16 flex flex-col items-center md:items-end">
+      <div className="w-full md:w-[45%] bg-[#FF9A00] text-[#1A3079] px-8 pb-10 pt-16 md:pt-24 md:px-16 flex flex-col items-center md:items-end">
         <div className="max-w-md text-center md:text-right">
           
           <div className="flex flex-col items-center md:items-end mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold mb-3 tracking-wide">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-3 tracking-wide">
               {t("title")}
             </h2>
             <div className="w-80 h-1.5 bg-[#1A3079]"></div>
@@ -23,10 +23,10 @@ export default function Vision() {
       <div className="w-full md:w-[55%] bg-[#1A3079] text-white px-8 pb-10 pt-16 md:pt-24 md:px-16 flex flex-col items-start">
         <div className="max-w-3xl">
           <div className="flex flex-col  items-center md:items-start mb-8">
-            <h2 className="text-4xl md:text-5xl font-bold mb-3 tracking-wide">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-3 tracking-wide">
               {t("mission")}
             </h2>
-            <div className="w-80 h-1.5 bg-[#dfa83c]"></div>
+            <div className="w-80 h-1.5 bg-[#FF9A00]"></div>
           </div>
 
           <div className="space-y-6 text-sm md:text-base font-light leading-loose text-gray-100">

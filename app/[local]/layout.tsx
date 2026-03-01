@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Sarabun } from "next/font/google";
+import { Inter, Kanit } from "next/font/google";
 import "./globals.css";
 import { HeroHeader } from "@/components/Header/header";
 import Footer from "@/components/Footer/footer";
@@ -15,8 +15,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const sarabun = Sarabun({
-  variable: "--font-sarabun",
+const kanit = Kanit({
+  variable: "--font-kanit",
   subsets: ["thai", "latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -46,7 +46,7 @@ export default async function RootLayout({
   return (
       <html lang={local} suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${sarabun.variable} antialiased`}
+        className={`${inter.variable} ${kanit.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
         <HeroHeader />

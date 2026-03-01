@@ -30,7 +30,7 @@ const Footer = () => {
 
               <div className="flex items-start gap-3">
                 <a
-                    href="https://www.google.co.th/maps/place/14°56'45.2%22N+102°03'13.1%22E/@14.9463603,102.0535468,17.98z/data=!4m4!3m3!8m2!3d14.945891!4d102.05363?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+                    href="https://www.google.co.th/maps/place/1104+Sapthani+Soi+3,+Tambon+Pru+Yai,+Amphoe+Mueang+Nakhon+Ratchasima,+Chang+Wat+Nakhon+Ratchasima+30000/@14.9446664,102.0627677,21z/data=!4m6!3m5!1s0x311eb32828934e95:0xf3d3dfddc7e6b420!8m2!3d14.9446664!4d102.0626652!16s%2Fg%2F11kx6ppw_m?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 hover:text-white transition-colors group"
                   target="_blank"
@@ -43,17 +43,10 @@ const Footer = () => {
               </div>
 
               <div className="flex items-start gap-3">
-                <a
-                  href="https://www.google.com/maps/place/14°00'21.6%22N+100°31'15.1%22E/@14.0059366,100.5173225,15z/data=!4m4!3m3!8m2!3d14.0059981!4d100.5208718?authuser=0&entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 hover:text-white transition-colors group"
-                  target="_blank"
-                >
                   <div className="bg-[#e89a10] p-1.5 rounded-sm shrink-0 mt-1">
                     <MapPin className="h-4 w-4 text-white" />
                   </div>
                   <span className="leading-relaxed hover:text-[#e89a10]">{t("address2")}</span>
-                </a>
               </div>
             </div>
           </div>

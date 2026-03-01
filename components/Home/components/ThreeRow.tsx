@@ -44,7 +44,7 @@ export default function ThreeRow() {
     {services.map((item, index) => (
       <Card 
         key={index} 
-        className="col-span-1 last:col-span-2 md:last:col-span-1 bg-[#1A3079] border-none shadow-lg h-full flex flex-col justify-start py-4 px-2 md:py-6"
+        className="col-span-1 last:col-span-2 md:last:col-span-1 bg-[#1A3079] border-none shadow-lg h-full flex flex-col justify-start py-4 px-2 md:py-6 rounded-md"
       >
         <CardHeader className="pb-1 md:pb-0 p-0"> 
           <div className="flex justify-center scale-75 md:scale-100"> 

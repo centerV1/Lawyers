@@ -26,12 +26,12 @@ export default function Service() {
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-[#4F200D]/85" />
+        <div className="absolute inset-0 bg-[#000000]/85" />
       </div>
 
       <div className="relative z-10 container max-w-6xl mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#e89a10] drop-shadow-md">
+          <h2 className="text-4xl md:text-6xl font-semibold text-[#e89a10] mb-12">
             {t("ourservice")}
           </h2>
           <div className="relative flex items-center justify-center mb-10">
@@ -67,7 +67,7 @@ export default function Service() {
                   </div>
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-800 mt-2 mb-2 line-clamp-2 min-h-14 flex items-center justify-center">
+                <h3 className="text-lg font-semibold text-slate-800 mt-2 mb-2 line-clamp-2 min-h-14 flex items-center justify-center">
                   {getLocalized(item, "title")}
                 </h3>
 
@@ -78,7 +78,7 @@ export default function Service() {
                   }}
                   className="w-full"
                 >
-                  <Button className="w-full bg-[#e89a10] hover:bg-[#cf890d] text-white font-bold rounded-md shadow-md transition-colors text-sm uppercase tracking-wider">
+                  <Button className="w-full bg-[#e89a10] hover:bg-[#cf890d] text-white font-medium rounded-md rounded-sm transition-colors text-sm uppercase tracking-wider">
                     {t("details")}
                   </Button>
                 </Link>

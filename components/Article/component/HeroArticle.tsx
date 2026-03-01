@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Scale } from "lucide-react";
 import { ArticleItem } from "@/data/Article";
+import { useTranslate } from "@/utils/useTranslate";
+import { useTranslations } from "next-intl";
+
 interface SingleArticleProps {
   article: ArticleItem;
 }
-import { useTranslate } from "@/utils/useTranslate";
-import { useTranslations } from "next-intl";
 
 export default function HeroArticle({ article }: SingleArticleProps) {
   const getLocalized = useTranslate<ArticleItem>();
@@ -21,7 +22,7 @@ export default function HeroArticle({ article }: SingleArticleProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#4F200D]/85 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[#000000]/85 mix-blend-multiply" />
       </div>
 
       <div className="relative z-10 w-full max-w-[1184px] mx-auto px-6 flex flex-col items-center text-center text-white">

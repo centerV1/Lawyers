@@ -16,11 +16,11 @@ export default function HomeExperience() {
     <section className="relative py-24 overflow-hidden">
       <div className="relative z-10 max-w-296.5 mx-auto px-4">
         <div className="text-center mb-16 max-w-296.5 mx-auto px-4">
-          <h2 className="text-5xl font-bold text-white mb-8">
+          <h2 className="text-4xl md:text-6xl font-semibold text-[#e89a10] mb-12">
             <span className="text-[#1a3673]">{t("experience")}</span>{" "}
             <span className="text-[#e2991a]">{t("our")}</span>
           </h2>
-          <div className="flex experiences-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-4">
             <div className="flex-1 border-t border-dotted border-[#a1a1a1]"></div>
 
             <div className="flex-none bg-transparent">
@@ -47,8 +47,8 @@ export default function HomeExperience() {
               </div>
 
               <div className="relative px-6 pb-8 -mt-12 flex-1 flex flex-col">
-                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-50 flex-1 flex experiences-center justify-center text-center min-h-45">
-                  <p className="text-[#1a3673] text-sm leading-relaxed font-medium">
+                <div className="bg-white rounded-xl p-6 shadow-md border border-gray-50 flex-1 flex experiences-center justify-center text-center min-h-45 ">
+                  <p className="text-[#1a3673] text-sm leading-relaxed font-medium line-clamp-6">
                     {getLocalized(experience, "description")}
                   </p>
                 </div>
@@ -61,7 +61,7 @@ export default function HomeExperience() {
                     }}
                     className="w-full"
                   >
-                    <Button className="w-full bg-[#e2991a] hover:bg-[#c98614] text-white py-6 rounded-lg font-bold uppercase">
+                    <Button className="w-full bg-[#e89a10] hover:bg-[#cf890d] text-white font-medium rounded-md rounded-sm transition-colors text-sm uppercase tracking-wider">
                       {t("details")}
                     </Button>
                   </Link>
@@ -78,7 +78,7 @@ export default function HomeExperience() {
             }}
             className="w-full"
           >
-            <Button className="w-full max-w-296.5 bg-[#e2991a] hover:bg-[#c98614] text-zinc-50 py-5 font-bold rounded-lg shadow-xl">
+            <Button className="w-full max-w-296.5 bg-[#e2991a] hover:bg-[#c98614] text-zinc-50 py-5 font-bold rounded-sm shadow-xl">
               {t("view")}
             </Button>
           </Link>

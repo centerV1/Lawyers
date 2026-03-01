@@ -26,35 +26,35 @@ export default function History() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7 flex flex-col">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0e1b3c] text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-medium text-[#1A3079] text-center mb-12">
               {t("title")}
             </h2>
 
             <div className="relative flex items-center justify-center mb-8">
               <Separator className="flex-1 border-dotted" />
               <div className="px-4">
-                <Scale className="text-[#e89a10] w-10 h-10" />
+                <Scale className="text-[#FF9A00] w-10 h-10" />
               </div>
               <Separator className="flex-1 border-dotted" />
             </div>
 
-            <div className="text-gray-700 text-base md:text-lg leading-relaxed text-justify indent-8">
-              <span className="font-bold text-[#0e1b3c]">
+            <div className="text-[#1E1E1E] text-base md:text-lg leading-relaxed text-justify indent-8">
+              <span className="font-bold text-[#1E1E1E]">
                 {t("companyName")}
               </span>
               {t("foundedText")}
-              <span className="font-semibold">{t("formerName")}</span>
+              <span className="font-bold">{t("formerName")}</span>
               {t("description")}
             </div>
 
-            <div className="flex justify-center mt-6 mb-8">
+            <div className="flex justify-center mt-6 mb-8 ">
               <Button
                 asChild
-                className="bg-[#e89a10] hover:bg-[#d68c0e] text-white px-8 transition-all shadow-md text-base"
+                className="bg-[#FF9A00] hover:bg-[#d68c0e] text-white px-7 transition-all  shadow-md text-base rounded-md font-light py-5"
               >
                 <Link
                   href={{
-                    pathname: "/service",
+                    pathname: "/about",
                   }}
                 >
                   {t("readMore")}
@@ -131,18 +131,18 @@ export default function History() {
             </Card>
 
             <div className="text-center mt-6 space-y-1">
-              <h3 className="text-[#1A3079] font-bold text-lg">
+              <h3 className="text-[#1A3079] font-bold text-base">
                 {t("certificateTitle")}
               </h3>
-              <p className="text-[#5A5A5A] font-medium">
+              <p className="text-[#5A5A5A] font-medium text-base">
                 {t("certificateSubtitle")}
               </p>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6">
               <Button
                 size="lg"
-                className="bg-[#e89a10] hover:bg-[#d68c0e] text-white text-lg px-10 py-6 rounded-md shadow-lg font-semibold transition-all hover:shadow-xl"
+                className="bg-[#FF9A00] hover:bg-[#d68c0e] text-white text-base px-10 py-6 rounded-sm shadow-lg font-medium transition-all hover:shadow-xl"
               >
                 {t("consultButton")}
               </Button>

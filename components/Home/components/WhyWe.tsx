@@ -13,7 +13,7 @@ export default function WhyWe() {
   return (
     <section className="w-full bg-[#1A3079] py-24 px-4 flex flex-col items-center justify-center font-sans">
       <div className="text-center mb-16 w-full max-w-296.5 mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#E39B16] mb-8 drop-shadow-md">
+        <h2 className="text-4xl md:text-6xl font-semibold text-[#e89a10] mb-12">
           {t("why")}
         </h2>
 
@@ -32,16 +32,16 @@ export default function WhyWe() {
         {whyChooseUsData.map((feature, index) => (
           <Card
             key={index}
-            className="bg-[#E39B16] border-none text-[#1A3079] shadow-2xl transition-all duration-300 hover:scale-105 h-full flex flex-col items-center text-center py-12 px-6 rounded-lg"
+            className="bg-[#E39B16] border-none text-[#1A3079] shadow-2xl transition-all duration-300 hover:scale-105 h-full flex flex-col items-center text-center py-12 px-4 rounded-lg"
           >
             <CardHeader className="flex flex-col items-center ">
               <div className="text-[#1A3079]">{feature.icon}</div>
             </CardHeader>
-            <CardTitle className="text-xl font-bold leading-tight  min-h-16 flex items-center justify-center">
+            <CardTitle className="text-lg font-semibold leading-tight  min-h-1 flex items-center justify-center">
               {getLocalized(feature, "title")}
             </CardTitle>
             <CardContent>
-              <p className="text-sm md:text-base font-medium leading-relaxed">
+              <p className="text-sm md:text-base font-medium leading-relaxed text-[#1E1E1E]">
                 {getLocalized(feature, "description")}
               </p>
             </CardContent>

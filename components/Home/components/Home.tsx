@@ -21,16 +21,16 @@ export default function HomeContent() {
           className="fill"
         />
 
-        <div className="absolute inset-0 bg-[#4F200D]/85 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[#000000]/85 mix-blend-multiply" />
       </div>
 
       <div className="relative z-10 text-center text-white px-4 w-full max-w-5xl">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-6xl font-black mb-2 animate-fade-in tracking-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-6xl font-semibold mb-2 animate-fade-in tracking-tight">
           {t("title")}
         </h1>
 
         <div className="relative inline-block pb-15">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#E39B16] leading-tight px-2">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-[#E39B16] leading-tight px-2">
             {t("company_name")}
           </h2>
 
@@ -47,14 +47,14 @@ export default function HomeContent() {
         </div>
 
         <div className="mt-5">
-          <p className="text-lg sm:text-xl md:text-xl font-bold text-gray-100 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-lg font-medium text-gray-100 max-w-5xl mx-auto leading-relaxed">
             {t("title2")}
           </p>
         </div>
       </div>
 
       <div className="relative z-10 flex flex-col sm:flex-row gap-5 mt-16 w-full px-8 sm:w-auto sm:justify-center">
-        <Button className="w-full sm:w-46.5 h-14.75 bg-[#E39B16] hover:bg-[#c58512] text-white text-lg font-bold rounded-xl shadow-2xl transition-transform hover:scale-105 active:scale-95">
+        <Button className="w-full sm:w-46.5 h-14.75 bg-[#FF9A00] hover:bg-[#c58512] text-white text-lg font-medium rounded-md shadow-2xl transition-transform hover:scale-105 active:scale-95">
           <Link
             href={{
               pathname: "/contact",
@@ -63,7 +63,7 @@ export default function HomeContent() {
         </Button>
         <Button
           variant="outline"
-          className="w-full sm:w-71.25 h-14.75 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black text-lg font-bold rounded-xl transition-all active:scale-95 backdrop-blur-sm"
+          className="w-full sm:w-71.25 h-14.75 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black text-lg font-medium rounded-md transition-all active:scale-95 backdrop-blur-sm"
         >
           <Link
             href={{

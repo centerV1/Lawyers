@@ -67,7 +67,7 @@ export default function OtherArticles({ currentId }: OtherArticlesProps) {
                     pathname: "/article/[articleId]",
                     params: { articleId: item.articleId },
                   }} className="w-full">
-                  <Button className="w-full bg-[#e89a10] hover:bg-[#cf890d] text-white font-bold rounded-md py-6 shadow-md text-sm uppercase tracking-wider">
+                  <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium uppercase rounded-md py-2 shadow-sm">
                      {t("details")}
                   </Button>
                 </Link>

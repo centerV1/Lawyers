@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { experienceData } from "@/data/Experience";
-import ExperienceHero from "@/components/experience/component/Hero";
+import ExperienceHero from "@/components/experience/component/HeroExperience";
 import SingleExperience from "@/components/experience/component/SingleExperience";
 import OtherExperiences from "@/components/experience/component/OtherExperiences";
 
@@ -30,7 +30,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-white">
-      <ExperienceHero />
+      <ExperienceHero experience={experience} />
       <SingleExperience experience={experience} />
       <div className="mt-20">
         <OtherExperiences currentId={currentId} />

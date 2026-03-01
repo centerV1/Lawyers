@@ -48,7 +48,7 @@ export default function OurCustomers() {
       </div>
       <div className="relative z-10 max-w-296.5 mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-8">
+          <h2 className="text-4xl md:text-6xl font-semibold text-[#e89a10] mb-12">
             <span className="text-[#1A3079]">{t("our")} </span>{" "}
             <span className="text-[#e2991a]">{t("customer")} </span>
           </h2>
